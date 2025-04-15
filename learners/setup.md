@@ -60,6 +60,13 @@ Use Terminal.app
 ```# packages in environment at /home/liu4201/conda_env/geo_env:
 #
 # Name                    Version                   Build  Channel
-torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge```
+torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge
+```
+
+```conda install ipykernel```
+```ipython kernel install --user --name=geo_env_kernel```
+
+```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
+
 ::::::::::::::::::::::::
 
