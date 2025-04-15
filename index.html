@@ -361,6 +361,16 @@ e.g. online setup) in the solutions blocks.</p>
 </div>
 </div>
 </div>
+<p>Now Open thinLinc Desktop and open a Terminal
+<code>sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00</code></p>
+<pre><code>salloc: Granted job allocation 1119021
+salloc: Waiting for resource configuration
+salloc: Nodes h000 are ready for job
+
+liu4201@h000.gautschi:[~] $</code></pre>
+<p><code>module load jupyter</code> <code>jupyter notebook</code> copy
+and paste the url to webpage</p>
+<p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
