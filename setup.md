@@ -70,3 +70,20 @@ torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge
 
 ::::::::::::::::::::::::
 
+Now Open thinLinc Desktop and open a Terminal
+```sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00```
+
+```
+salloc: Granted job allocation 1119021
+salloc: Waiting for resource configuration
+salloc: Nodes h000 are ready for job
+
+liu4201@h000.gautschi:[~] $
+```
+
+```module load jupyter```
+```jupyter notebook```
+copy and paste the url to webpage
+
+Open a new Terminal
+```ssh h000 -L 8888:localhost:8888```
