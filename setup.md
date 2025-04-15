@@ -48,7 +48,25 @@ Use Terminal.app
 
 ### Linux
 
-Use Terminal
+```module load conda```
+```conda create -p ./geo_env```
+```conda activate ./geo_env```
+
+```(/home/liu4201/geo_env) liu4201@login03.gautschi:```
+
+```conda install torchgeo```
+```conda list torchgeo```
+
+```# packages in environment at /home/liu4201/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge
+```
+
+```conda install ipykernel```
+```ipython kernel install --user --name=geo_env_kernel```
+
+```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
 
 ::::::::::::::::::::::::
 
