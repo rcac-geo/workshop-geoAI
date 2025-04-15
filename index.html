@@ -348,7 +348,15 @@ e.g. online setup) in the solutions blocks.</p>
 </button>
 <div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
-<p>Use Terminal</p>
+<p><code>module load conda</code> <code>conda create -p ./geo_env</code>
+<code>conda activate ./geo_env</code></p>
+<p><code>(/home/liu4201/geo_env) liu4201@login03.gautschi:</code></p>
+<p><code>conda install torchgeo</code>
+<code>conda list torchgeo</code></p>
+<p><code># packages in environment at /home/liu4201/conda_env/geo_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge</code></p>
+<p><code>conda install ipykernel</code>
+<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<p><code>Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel</code></p>
 </div>
 </div>
 </div>
