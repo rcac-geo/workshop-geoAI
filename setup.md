@@ -48,12 +48,15 @@ Use Terminal.app
 
 ### Linux
 
-```module load conda```
-```conda create -p ./geo_env```
+```module load conda cuda/12.6.0```
+
+```conda create -p ./geo_env python=3.12```
+
 ```conda activate ./geo_env```
 
 ```(/home/liu4201/geo_env) liu4201@login03.gautschi:```
 
+```pip3 install torch torchvision torchaudio```
 ```conda install torchgeo```
 ```conda list torchgeo```
 
