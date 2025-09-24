@@ -46,7 +46,65 @@ Use Terminal.app
 
 :::::::::::::::: spoiler
 
-### Linux
+### HPC Cluster Anvil
+```cd $PROJECT``` 
+
+```module load modtree/gpu conda cuda/12.0.1```
+
+```conda create -p ./geo_env python=3.12```
+
+```conda activate ./geo_env```
+
+```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
+
+```conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia```
+```conda install torchgeo```
+```conda list torchgeo```
+
+```
+# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#                                                                               
+# Name                    Version                   Build  Channel              
+torchgeo                  0.7.1              pyhd8ed1ab_0    conda-forge  
+```
+```pip install terratorch```
+```conda list terratorch```
+
+```
+# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+terratorch                1.0.2                    pypi_0    pypi
+ 
+```
+
+```conda install ipykernel```
+```ipython kernel install --user --name=geo_env_kernel```
+
+Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel
+
+::::::::::::::::::::::::
+
+Now Open thinLinc Desktop and open a Terminal
+```sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00```
+
+```
+salloc: Granted job allocation 1119021
+salloc: Waiting for resource configuration
+salloc: Nodes h000 are ready for job
+
+liu4201@h000.gautschi:[~] $
+```
+
+```module load jupyter```
+```jupyter notebook```
+copy and paste the url to webpage
+
+Open a new Terminal
+```ssh h000 -L 8888:localhost:8888```
+
+### HPC Cluster Gautschi
+```cd $SCRATCH```
 
 ```module load conda cuda/12.6.0```
 
@@ -54,13 +112,22 @@ Use Terminal.app
 
 ```conda activate ./geo_env```
 
-```(/home/liu4201/geo_env) liu4201@login03.gautschi:```
+```(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:```
 
-```pip3 install torch torchvision torchaudio```
-```conda install torchgeo```
+```pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126```
+Installing torch with cuda before terratorch made sure the torch you installed is the version with GPU enabled.
+
+```pip install terratorch```
 ```conda list torchgeo```
 
-```# packages in environment at /home/liu4201/conda_env/geo_env:
+```# packages in environment at /scratch/gautschi/liu4201/geo_env:
+#
+# Name                    Version                   Build  Channel
+terratorch                1.0.2                    pypi_0    pypi
+```
+`terratorch` automatically include `torchgeo`
+
+```# packages in environment at /scratch/gautschi/liu4201/geo_env:
 #
 # Name                    Version                   Build  Channel
 torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge
@@ -90,3 +157,4 @@ copy and paste the url to webpage
 
 Open a new Terminal
 ```ssh h000 -L 8888:localhost:8888```
+
