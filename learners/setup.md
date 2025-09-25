@@ -57,7 +57,7 @@ Use Terminal.app
 
 ```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
 
-```conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia```
+```conda install pytorch-cuda=12.1 -c pytorch -c nvidia```
 ```conda install torchgeo```
 ```conda list torchgeo```
 
