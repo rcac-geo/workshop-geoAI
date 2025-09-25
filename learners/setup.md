@@ -57,16 +57,9 @@ Use Terminal.app
 
 ```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
 
-```conda install pytorch-cuda=12.1 -c pytorch -c nvidia```
-```conda install torchgeo```
-```conda list torchgeo```
+```pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121```
+Installing torch with cuda before terratorch made sure the torch you installed is the version with GPU enabled.
 
-```
-# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
-#                                                                               
-# Name                    Version                   Build  Channel              
-torchgeo                  0.7.1              pyhd8ed1ab_0    conda-forge  
-```
 ```pip install terratorch```
 ```conda list terratorch```
 
@@ -74,8 +67,15 @@ torchgeo                  0.7.1              pyhd8ed1ab_0    conda-forge
 # packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
 #
 # Name                    Version                   Build  Channel
-terratorch                1.0.2                    pypi_0    pypi
- 
+terratorch                1.1                    pypi_0    pypi
+```
+`terratorch` automatically include `torchgeo`
+
+```
+# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+torchgeo                  0.7.0                    pypi_0    pypi 
 ```
 
 ```conda install ipykernel```
@@ -123,14 +123,14 @@ Installing torch with cuda before terratorch made sure the torch you installed i
 ```# packages in environment at /scratch/gautschi/liu4201/geo_env:
 #
 # Name                    Version                   Build  Channel
-terratorch                1.0.2                    pypi_0    pypi
+terratorch                1.1                     pypi_0    pypi
 ```
 `terratorch` automatically include `torchgeo`
 
 ```# packages in environment at /scratch/gautschi/liu4201/geo_env:
 #
 # Name                    Version                   Build  Channel
-torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge
+torchgeo                  0.7.0                    pypi_0    pypi 
 ```
 
 ```conda install ipykernel```
