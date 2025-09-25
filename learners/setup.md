@@ -57,9 +57,6 @@ Use Terminal.app
 
 ```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
 
-```pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121```
-Installing torch with cuda before terratorch made sure the torch you installed is the version with GPU enabled.
-
 ```pip install terratorch```
 ```conda list terratorch```
 
@@ -86,14 +83,17 @@ Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kerne
 ::::::::::::::::::::::::
 
 Now Open thinLinc Desktop and open a Terminal
-```sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00```
+```sinteractive -A nairrtest-ai -p ai -N1 -n7 --gpus-per-node=1 -t 1:00:00```
 
 ```
-salloc: Granted job allocation 1119021
+salloc: Pending job allocation 13972179
+salloc: job 13972179 queued and waiting for resources
+salloc: job 13972179 has been allocated resources
+salloc: Granted job allocation 13972179
 salloc: Waiting for resource configuration
-salloc: Nodes h000 are ready for job
+salloc: Nodes g006 are ready for job
 
-liu4201@h000.gautschi:[~] $
+x-xliu26@h001.anvil:[~] $ 
 ```
 
 ```module load jupyter```
@@ -113,9 +113,6 @@ Open a new Terminal
 ```conda activate ./geo_env```
 
 ```(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:```
-
-```pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126```
-Installing torch with cuda before terratorch made sure the torch you installed is the version with GPU enabled.
 
 ```pip install terratorch```
 ```conda list torchgeo```
