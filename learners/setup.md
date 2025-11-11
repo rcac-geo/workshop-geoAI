@@ -58,6 +58,7 @@ Use Terminal.app
 ```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
 
 ```pip install terratorch```
+
 ```conda list terratorch```
 
 ```
@@ -66,7 +67,7 @@ Use Terminal.app
 # Name                    Version                   Build  Channel
 terratorch                1.1                    pypi_0    pypi
 ```
-`terratorch` automatically include `torchgeo`
+`terratorch` automatically include `torchgeo`, ```conda list torchgeo```
 
 ```
 # packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
