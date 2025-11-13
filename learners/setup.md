@@ -81,7 +81,6 @@ torchgeo                  0.7.0                    pypi_0    pypi
 
 Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel
 
-::::::::::::::::::::::::
 
 Now Open thinLinc Desktop and open a Terminal
 ```sinteractive -A nairrtest-ai -p ai -N1 -n7 --gpus-per-node=1 -t 1:00:00```
