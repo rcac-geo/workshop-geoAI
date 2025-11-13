@@ -333,7 +333,7 @@ e.g. online setup) in the solutions blocks.</p>
   Windows
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>Use PuTTY</p>
 </div>
@@ -348,7 +348,7 @@ e.g. online setup) in the solutions blocks.</p>
   MacOS
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Use Terminal.app</p>
 </div>
@@ -360,21 +360,61 @@ e.g. online setup) in the solutions blocks.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
   <h3 class="accordion-header" id="headingSpoiler3">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Linux
+  HPC Cluster Anvil
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
+<p><code>cd $PROJECT</code></p>
+<p><code>module load modtree/gpu conda cuda/12.0.1</code></p>
+<p><code>conda create -p ./geo_env python=3.12</code></p>
+<p><code>conda activate ./geo_env</code></p>
+<p><code>(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:</code></p>
+<p><code>pip install terratorch</code></p>
+<p><code>conda list terratorch</code></p>
+<pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+terratorch                1.1                    pypi_0    pypi</code></pre>
+<p><code>terratorch</code> automatically include <code>torchgeo</code>,
+<code>conda list torchgeo</code></p>
+<pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+torchgeo                  0.7.0                    pypi_0    pypi </code></pre>
+<p><code>conda install ipykernel</code>
+<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<p>Installed kernelspec geo_env_kernel in
+/home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel</p>
+<p>Now Open thinLinc Desktop and open a Terminal
+<code>sinteractive -A nairrtest-ai -p ai -N1 -n7 --gpus-per-node=1 -t 1:00:00</code></p>
+<pre><code>salloc: Pending job allocation 13972179
+salloc: job 13972179 queued and waiting for resources
+salloc: job 13972179 has been allocated resources
+salloc: Granted job allocation 13972179
+salloc: Waiting for resource configuration
+salloc: Nodes g006 are ready for job
+
+x-xliu26@h001.anvil:[~] $ </code></pre>
+<p><code>module load jupyter</code> <code>jupyter notebook</code> copy
+and paste the url to webpage</p>
+<p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
+<div class="section level3">
+<h3 id="hpc-cluster-gautschi">HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#hpc-cluster-gautschi"></a></h3>
+<p><code>cd $SCRATCH</code></p>
 <p><code>module load conda cuda/12.6.0</code></p>
 <p><code>conda create -p ./geo_env python=3.12</code></p>
 <p><code>conda activate ./geo_env</code></p>
-<p><code>(/home/liu4201/geo_env) liu4201@login03.gautschi:</code></p>
-<p><code>pip3 install torch torchvision torchaudio</code>
-<code>conda install torchgeo</code> <code>conda list torchgeo</code></p>
-<p><code># packages in environment at /home/liu4201/conda_env/geo_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0              pyhd8ed1ab_0    conda-forge</code></p>
+<p><code>(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:</code></p>
+<p><code>pip install terratorch</code>
+<code>conda list torchgeo</code></p>
+<p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel terratorch                1.1                     pypi_0    pypi</code>
+<code>terratorch</code> automatically include <code>torchgeo</code></p>
+<p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0                    pypi_0    pypi</code></p>
 <p><code>conda install ipykernel</code>
 <code>ipython kernel install --user --name=geo_env_kernel</code></p>
 <p><code>Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel</code></p>
+</div>
 </div>
 </div>
 </div>
@@ -441,9 +481,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
   "identifier": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
-  "dateCreated": "2025-05-09",
-  "dateModified": "2025-09-23",
-  "datePublished": "2025-09-23"
+  "dateCreated": "2025-11-13",
+  "dateModified": "2025-11-13",
+  "datePublished": "2025-11-13"
 }
 
   </script><script>
