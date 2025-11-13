@@ -2,8 +2,18 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+## Instructor
+
+**Xiao Liu**: Xiao is a Senior Research Software Engineer at Purdue University’s Rosen Center for Advanced Computing. She has two Masters in Geosciences and a Master in Computer Sciences and Engineering. Her knowledge encompassed GIS, machine learning, and hydrologic modeling.
+
+## Schedule
+
+| **Time**  | **Session**  |
+|:---|-------------|
+| 1:00 PM | Get Started with GeoAI |
+| 2:00 PM | Tools and Setup |
+| 3:00 PM | Cases Studies |
+| 4:30 PM | Wrap-Up & Discussion |
 
 ## Data Sets
 
