@@ -19,21 +19,18 @@ exercises: 2
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+#### GeoAI
+- Geospatial Artificial Intelligence
+- Give AI a "sense of place" and enabling it to understand and analyze the world through a spatial lens
+#### Geospatial Data
+- Image VS Imagery
+- Compared with Image, it has Coordinates Reference System (CRS)—a mapping to real-world locations.
+- Imagery: remotely sensed data captured by satellites, aircraft, drones, or other sensors. 
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
-
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+## GeoAI tasks
+## Foundation Models on Geosciences (GFMs)
+## Why GeoAI on HPC clusters
+## GeoAI datasets and GFMs available on Anvil
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
