@@ -1,33 +1,67 @@
 ---
-title: "Using Markdown"
+title: "Get Started with GeoAI"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is GeoAI and typical GeoAI tasks?
+- What are Foundation Models on Geosciences (GFMs)?
+- Why we do GeoAI on HPC clusters?
+- What are GeoAI datasets and GFMs available on Anvil?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Explain the foundational concepts of GeoAI and tasks
+- Demonstrate how AI are applied to geospatial data 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-#### GeoAI
+### GeoAI
 - Geospatial Artificial Intelligence
 - Give AI a "sense of place" and enabling it to understand and analyze the world through a spatial lens
-#### Geospatial Data
+### Geospatial Data
 - Image VS Imagery
 - Compared with Image, it has Coordinates Reference System (CRS)—a mapping to real-world locations.
 - Imagery: remotely sensed data captured by satellites, aircraft, drones, or other sensors. 
 
 ## GeoAI tasks
+
+### Supervised Learning Tasks
+#### Classification Problem
+- Image Classification
+- Object Detection
+- Semantic Segmentation
+- Instance Segmentation
+- Point Cloud Classification
+
+#### Regression Problem
+
+- Regression (Spatial Prediction)
+ - Predicting continuous values at unobserved locations 
+ - Based on known spatial patterns and covariates
+ - Applications: predicting air quality at a given location, property values, crop yields.
+- Time Series Forecasting  
+ - Predicting future values of a variable at specific locations
+ - Incorporating both temporal trends and spatial dependencies 
+ - Applications: forecasting disease spread, traffic congestion, flood events, urban expansion
+
+
+### Unsupervised Learning Tasks
+- Spatial Pattern Recognition (Clustering)
+ - Grouping similar data points together based on various attributes 
+ - Reveal spatial patterns
+ - Applications: crime hotspots, disease clusters…
+- Anomaly (Outlier) Detection
+ - Identifying unusual /abnormal spatial events 
+ - Applications: fraud detection, infrastructure monitoring (e.g., unusual traffic flow), or environmental pollution.
+
+
 ## Foundation Models on Geosciences (GFMs)
 ## Why GeoAI on HPC clusters
 ## GeoAI datasets and GFMs available on Anvil
