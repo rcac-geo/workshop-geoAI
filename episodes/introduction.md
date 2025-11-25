@@ -6,10 +6,10 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is GeoAI and typical GeoAI tasks?
+- What is GeoAI and its typical tasks?
 - What are Foundation Models on Geosciences (GFMs)?
 - Why we do GeoAI on HPC clusters?
-- What are GeoAI datasets and GFMs available on Anvil?
+- What are GeoAI datasets and GFMs available on Anvil, and how to use them?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -39,6 +39,15 @@ exercises: 2
 - Semantic Segmentation
 - Instance Segmentation
 - Point Cloud Classification
+
+| Tasks | Image Classification | Object Detection | Semantic Segmentation | Instance Segmentation | Point Cloud Classification |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Goal | Assign a single class label to an entire image | Locate and classify specific objects within an image | Classify every pixel in an image into a defined class | Identify, classify, and delineate each individual instance of an object | Assign a class label to every 3D point in a point cloud (e.g., collected via LiDAR). |
+| Output | A single label/category (e.g., "Forest," "Urban Area," "Cloudy Image"). | Bounding boxes (rectangles) around each object, plus a class label for each box. | A pixel-wise mask where all pixels belonging to the same class (e.g., "road") have the same color/label, regardless of individual instance. | Pixel-wise masks for each individual object, distinguishing between separate instances of the same class. | A class label for each point (e.g., "Ground," "Building," "Vegetation," "Power Line"). |
+| Applications | image cataloging | Counting features (e.g., number of cars, buildings, trees) | Land cover mapping, road network extraction, defining water bodies, crop type classification | counting individual trees/plants | - |
+
+
+
 
 #### Regression Problem
 
