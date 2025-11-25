@@ -43,23 +43,23 @@ exercises: 2
 #### Regression Problem
 
 - Regression (Spatial Prediction)
- - Predicting continuous values at unobserved locations 
- - Based on known spatial patterns and covariates
- - Applications: predicting air quality at a given location, property values, crop yields.
+    - Predicting continuous values at unobserved locations 
+    - Based on known spatial patterns and covariates
+    - Applications: predicting air quality at a given location, property values, crop yields.
 - Time Series Forecasting  
- - Predicting future values of a variable at specific locations
- - Incorporating both temporal trends and spatial dependencies 
- - Applications: forecasting disease spread, traffic congestion, flood events, urban expansion
+    - Predicting future values of a variable at specific locations
+    - Incorporating both temporal trends and spatial dependencies 
+    - Applications: forecasting disease spread, traffic congestion, flood events, urban expansion
 
 
 ### Unsupervised Learning Tasks
 - Spatial Pattern Recognition (Clustering)
- - Grouping similar data points together based on various attributes 
- - Reveal spatial patterns
- - Applications: crime hotspots, disease clusters…
+    - Grouping similar data points together based on various attributes 
+    - Reveal spatial patterns
+    - Applications: crime hotspots, disease clusters…
 - Anomaly (Outlier) Detection
- - Identifying unusual /abnormal spatial events 
- - Applications: fraud detection, infrastructure monitoring (e.g., unusual traffic flow), or environmental pollution.
+    - Identifying unusual /abnormal spatial events 
+    - Applications: fraud detection, infrastructure monitoring (e.g., unusual traffic flow), or environmental pollution.
 
 
 ## Foundation Models on Geosciences (GFMs)
