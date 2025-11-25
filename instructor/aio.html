@@ -244,7 +244,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Using Markdown</a>
+        <a href="introduction.html">1. Get Started with GeoAI</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -332,9 +332,9 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         
         
-<section id="aio-introduction"><p>Content from <a href="introduction.html">Using Markdown</a></p>
+<section id="aio-introduction"><p>Content from <a href="introduction.html">Get Started with GeoAI</a></p>
 <hr>
-<p>Last updated on 2025-11-13 |
+<p>Last updated on 2025-11-25 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -349,8 +349,10 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you write a lesson using Markdown and
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
+<li>What is GeoAI and typical GeoAI tasks?</li>
+<li>What are Foundation Models on Geosciences (GFMs)?</li>
+<li>Why we do GeoAI on HPC clusters?</li>
+<li>What are GeoAI datasets and GFMs available on Anvil?</li>
 </ul>
 </div>
 </div>
@@ -360,9 +362,8 @@
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain how to use markdown with The Carpentries Workbench</li>
-<li>Demonstrate how to include pieces of code, figures, and nested
-challenge blocks</li>
+<li>Explain the foundational concepts of GeoAI and tasks</li>
+<li>Demonstrate how AI are applied to geospatial data</li>
 </ul>
 </div>
 </div>
@@ -372,13 +373,13 @@ challenge blocks</li>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<div class="section level4">
-<h4 id="geoai">GeoAI<a class="anchor" aria-label="anchor" href="#geoai"></a>
-</h4>
+<div class="section level3">
+<h3 id="geoai">GeoAI<a class="anchor" aria-label="anchor" href="#geoai"></a>
+</h3>
 <ul>
 <li>Geospatial Artificial Intelligence</li>
 <li>Give AI a “sense of place” and enabling it to understand and analyze
-the world through a spatial lens #### Geospatial Data</li>
+the world through a spatial lens ### Geospatial Data</li>
 <li>Image VS Imagery</li>
 <li>Compared with Image, it has Coordinates Reference System (CRS)—a
 mapping to real-world locations.</li>
@@ -388,7 +389,54 @@ drones, or other sensors.</li>
 </div>
 </section><section><h2 class="section-heading" id="geoai-tasks">GeoAI tasks<a class="anchor" aria-label="anchor" href="#geoai-tasks"></a>
 </h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="foundation-models-on-geosciences-gfms">Foundation Models on Geosciences (GFMs)<a class="anchor" aria-label="anchor" href="#foundation-models-on-geosciences-gfms"></a>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="supervised-learning-tasks">Supervised Learning Tasks<a class="anchor" aria-label="anchor" href="#supervised-learning-tasks"></a>
+</h3>
+<div class="section level4">
+<h4 id="classification-problem">Classification Problem<a class="anchor" aria-label="anchor" href="#classification-problem"></a>
+</h4>
+<ul>
+<li>Image Classification</li>
+<li>Object Detection</li>
+<li>Semantic Segmentation</li>
+<li>Instance Segmentation</li>
+<li>Point Cloud Classification</li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="regression-problem">Regression Problem<a class="anchor" aria-label="anchor" href="#regression-problem"></a>
+</h4>
+<ul>
+<li>Regression (Spatial Prediction)</li>
+<li>Predicting continuous values at unobserved locations</li>
+<li>Based on known spatial patterns and covariates</li>
+<li>Applications: predicting air quality at a given location, property
+values, crop yields.</li>
+<li>Time Series Forecasting  </li>
+<li>Predicting future values of a variable at specific locations</li>
+<li>Incorporating both temporal trends and spatial dependencies</li>
+<li>Applications: forecasting disease spread, traffic congestion, flood
+events, urban expansion</li>
+</ul>
+</div>
+</div>
+<div class="section level3">
+<h3 id="unsupervised-learning-tasks">Unsupervised Learning Tasks<a class="anchor" aria-label="anchor" href="#unsupervised-learning-tasks"></a>
+</h3>
+<ul>
+<li>Spatial Pattern Recognition (Clustering)</li>
+<li>Grouping similar data points together based on various
+attributes</li>
+<li>Reveal spatial patterns</li>
+<li>Applications: crime hotspots, disease clusters…</li>
+<li>Anomaly (Outlier) Detection</li>
+<li>Identifying unusual /abnormal spatial events</li>
+<li>Applications: fraud detection, infrastructure monitoring (e.g.,
+unusual traffic flow), or environmental pollution.</li>
+</ul>
+</div>
+</section><section><h2 class="section-heading" id="foundation-models-on-geosciences-gfms">Foundation Models on Geosciences (GFMs)<a class="anchor" aria-label="anchor" href="#foundation-models-on-geosciences-gfms"></a>
 </h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="why-geoai-on-hpc-clusters">Why GeoAI on HPC clusters<a class="anchor" aria-label="anchor" href="#why-geoai-on-hpc-clusters"></a>
 </h2>
@@ -400,7 +448,7 @@ drones, or other sensors.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -432,7 +480,7 @@ View”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Output </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -461,7 +509,7 @@ challenge blocks?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
