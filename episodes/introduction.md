@@ -1,7 +1,7 @@
 ---
 title: "Get Started with GeoAI"
-teaching: 10
-exercises: 2
+teaching: 5
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
