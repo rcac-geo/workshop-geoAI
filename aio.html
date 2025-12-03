@@ -542,6 +542,9 @@ or no (zero-shot) new examples.</li>
 </ul></section><section><h2 class="section-heading" id="why-geoai-on-hpc-clusters">4 Why GeoAI on HPC clusters<a class="anchor" aria-label="anchor" href="#why-geoai-on-hpc-clusters"></a>
 </h2>
 <hr class="half-width">
+<div class="section level3">
+<h3 id="features-of-hpc-clusters-better-for-geoai">4.1 Features of HPC clusters better for GeoAI<a class="anchor" aria-label="anchor" href="#features-of-hpc-clusters-better-for-geoai"></a>
+</h3>
 <ul>
 <li>Large Storage on HPC clusters
 <ul>
@@ -570,7 +573,38 @@ necessary)</li>
 <li>Large computational capacity with GPUs</li>
 <li>Centralized GeoAI datasets and Foundation Models on Geosciences that
 you can directly use</li>
-</ul></section><section><h2 class="section-heading" id="geoai-datasets-and-gfms-available-on-anvil">5 GeoAI datasets and GFMs available on Anvil<a class="anchor" aria-label="anchor" href="#geoai-datasets-and-gfms-available-on-anvil"></a>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="an-demo-on-anvil-cluster-and-mac-book">4.2 An Demo on Anvil cluster and Mac book<a class="anchor" aria-label="anchor" href="#an-demo-on-anvil-cluster-and-mac-book"></a>
+</h3>
+<ul>
+<li>A typical example of GFMs:
+<ul>
+<li>Prithvi-EO-2.0</li>
+<li>the second generation Earth Observation(EO) foundation model jointly
+developed by IBM, NASA, and Jülich Supercomputing Centre.</li>
+<li><a href="https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M" class="external-link uri">https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M</a></li>
+<li>We will demo a crop classification task with Prithvi-EO-2.0 on
+Anvil</li>
+</ul>
+</li>
+<li>Training on Anvil for 50 epochs
+<ul>
+<li>Jupyter notebook—only one GPU can be used: 4101.991409 seconds: 1.13
+hours</li>
+<li>Sbatch job-when use two GPUs: 2366.664293 seconds: 39.4 mins</li>
+</ul>
+</li>
+<li>Training on my Mac Max for 1 epoch
+<ul>
+<li>Jupyter notebook: 38 days 13 hours 44 mins</li>
+</ul>
+</li>
+</ul>
+<figure><img width="738" height="21" alt="image" src="https://github.com/user-attachments/assets/fd5c80c3-15dc-4e4f-8542-6854d15cc15f" class="figure mx-auto d-block"></figure>
+</div>
+</section><section><h2 class="section-heading" id="geoai-datasets-and-gfms-available-on-anvil">5 GeoAI datasets and GFMs available on Anvil<a class="anchor" aria-label="anchor" href="#geoai-datasets-and-gfms-available-on-anvil"></a>
 </h2>
 <hr class="half-width">
 <div id="challenge-1-can-you-do-it" class="callout challenge">
