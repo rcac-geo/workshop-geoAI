@@ -131,16 +131,16 @@ exercises: 2
 
 #### 5.1.1 How to check what GeoAI datasets are avaiable on Anvil
 
-<img width="1062" height="393" alt="image" src="https://github.com/user-attachments/assets/a7efa472-d554-408b-b616-e8952116a4b9" />
+<img width="750" height="393" alt="image" src="https://github.com/user-attachments/assets/a7efa472-d554-408b-b616-e8952116a4b9" />
 
 #### 5.1.2 How to use the GeoAI datasets on Anvil
 
 <img width="750" height="478" alt="image" src="https://github.com/user-attachments/assets/34356f02-5c87-422b-8ebd-eab42b8e483c" />
-<img width="1057" height="224" alt="image" src="https://github.com/user-attachments/assets/a04aaa3f-658d-4dd9-b9d6-e71083f00a1d" />
+<img width="750" height="224" alt="image" src="https://github.com/user-attachments/assets/a04aaa3f-658d-4dd9-b9d6-e71083f00a1d" />
 
 ### 5.2 GFMs available on Anvil
 
-<img width="1063" height="385" alt="image" src="https://github.com/user-attachments/assets/170671ea-4f88-4d67-a7ef-1821238195ac" />
+<img width="1063" height="272" alt="image" src="https://github.com/user-attachments/assets/170671ea-4f88-4d67-a7ef-1821238195ac" />
 
 - Check more information on: https://www.rcac.purdue.edu/knowledge/gfms
 - Contact rcac-help@purdue.edu if there is a popular GFMs you want to use and is not currently available on HPC Clusters
