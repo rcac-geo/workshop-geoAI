@@ -20,25 +20,28 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## 1 Introduction
 
-### GeoAI
+### 1.1 GeoAI
 - Geospatial Artificial Intelligence
 - Give AI a "sense of place" and enabling it to understand and analyze the world through a spatial lens
-### Geospatial Data
+  
+### 1.2 Geospatial Data
 - Image VS Imagery
 - Compared with Image, it has Coordinates Reference System (CRS)—a mapping to real-world locations.
 - Imagery: remotely sensed data captured by satellites, aircraft, drones, or other sensors. 
 
-## GeoAI tasks
+## 2 GeoAI tasks
 
-### Supervised Learning Tasks
-#### Classification Problem
+### 2.1 Supervised Learning Tasks
+
+#### 2.1.1 Classification Problem
 - Image Classification
 - Object Detection
 - Semantic Segmentation
 - Instance Segmentation
 - Point Cloud Classification
+
 
 | Tasks | Image Classification | Object Detection | Semantic Segmentation | Instance Segmentation | Point Cloud Classification |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -49,7 +52,7 @@ exercises: 2
 
 
 
-#### Regression Problem
+#### 2.2.2 Regression Problem
 
 - Regression (Spatial Prediction)
     - Predicting continuous values at unobserved locations 
@@ -61,7 +64,7 @@ exercises: 2
     - Applications: forecasting disease spread, traffic congestion, flood events, urban expansion
 
 
-### Unsupervised Learning Tasks
+### 2.2 Unsupervised Learning Tasks
 - Spatial Pattern Recognition (Clustering)
     - Grouping similar data points together based on various attributes 
     - Reveal spatial patterns
@@ -71,9 +74,38 @@ exercises: 2
     - Applications: fraud detection, infrastructure monitoring (e.g., unusual traffic flow), or environmental pollution.
 
 
-## Foundation Models on Geosciences (GFMs)
-## Why GeoAI on HPC clusters
-## GeoAI datasets and GFMs available on Anvil
+## 3 Foundation Models on Geosciences (GFMs)
+
+- Large-scale neural networks that are pre-trained on vast and diverse datasets in a self-supervised or unsupervised manner.
+- Massive Pre-training Data
+    - Unlike traditional AI models that are trained for a specific task on a limited, labeled dataset, GFMs are trained on enormous, diverse datasets relevant to Earth systems.
+- Generalizable Knowledge
+    - Through pre-training, GFMs develop a deep understanding of the underlying relationships and patterns within Earth science data. 
+    - Allow them to capture complex features that are relevant across different domains and tasks.
+- Adaptability 
+    - GFM can be "fine-tuned" or adapted to perform specific geoscience tasks with much less new data than would be required for a traditional model. 
+    - In some cases, they can even perform tasks with very few (few-shot) or no (zero-shot) new examples.
+
+## 4 Why GeoAI on HPC clusters
+- Large Storage on HPC clusters
+    - Local (mountable)
+        - /home
+        - /depot 
+        - /scratch
+        - /tmp
+        - /project
+    - Indirect Access
+        - Fortress (HPSS tape archive)
+        - Ceph (S3 Object Storage)
+    - Globus endpoint to easily share data
+    - /depot or /project for group storage (only one copy of data is necessary)
+      
+<img width="612" height="343" alt="image" src="https://github.com/user-attachments/assets/f7d6d5ed-0c71-490b-97c2-ee115bbad4d9" />
+
+- Large computational capacity with GPUs
+- Centralized GeoAI datasets and Foundation Models on Geosciences that you can directly use
+  
+## 5 GeoAI datasets and GFMs available on Anvil
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
