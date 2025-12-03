@@ -87,6 +87,9 @@ exercises: 2
     - In some cases, they can even perform tasks with very few (few-shot) or no (zero-shot) new examples.
 
 ## 4 Why GeoAI on HPC clusters
+
+### 4.1 Features of HPC clusters better for GeoAI
+
 - Large Storage on HPC clusters
     - Local (mountable)
         - /home
@@ -104,7 +107,24 @@ exercises: 2
 
 - Large computational capacity with GPUs
 - Centralized GeoAI datasets and Foundation Models on Geosciences that you can directly use
-  
+
+### 4.2 An Demo on Anvil cluster and Mac book
+
+- A typical example of GFMs: 
+    - Prithvi-EO-2.0
+    - the second generation Earth Observation(EO) foundation model jointly developed by IBM, NASA, and Jülich Supercomputing Centre.
+    - https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M
+    - We will demo a crop classification task with Prithvi-EO-2.0 on Anvil
+- Training on Anvil for 50 epochs
+    - Jupyter notebook—only one GPU can be used: 4101.991409 seconds: 1.13 hours
+    - Sbatch job-when use two GPUs: 2366.664293 seconds: 39.4 mins
+- Training on my Mac Max for 1 epoch
+    - Jupyter notebook: 38 days 13 hours 44 mins
+
+<img width="738" height="21" alt="image" src="https://github.com/user-attachments/assets/fd5c80c3-15dc-4e4f-8542-6854d15cc15f" />
+
+
+
 ## 5 GeoAI datasets and GFMs available on Anvil
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
