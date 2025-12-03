@@ -127,80 +127,21 @@ exercises: 2
 
 ## 5 GeoAI datasets and GFMs available on Anvil
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+### 5.1 GeoAI datasets available on Anvil
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+#### 5.1.1 How to check what GeoAI datasets are avaiable on Anvil
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+<img width="2124" height="1114" alt="image" src="https://github.com/user-attachments/assets/a7efa472-d554-408b-b616-e8952116a4b9" />
 
-::::::::::::::::::::::::::::::::::::: challenge 
+#### 5.1.2 How to use the GeoAI datasets on Anvil
 
-## Challenge 1: Can you do it?
+<img width="2294" height="1464" alt="image" src="https://github.com/user-attachments/assets/34356f02-5c87-422b-8ebd-eab42b8e483c" />
+<img width="2114" height="630" alt="image" src="https://github.com/user-attachments/assets/a04aaa3f-658d-4dd9-b9d6-e71083f00a1d" />
 
-What is the output of this command?
+### 5.2 GFMs available on Anvil
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+<img width="2126" height="770" alt="image" src="https://github.com/user-attachments/assets/170671ea-4f88-4d67-a7ef-1821238195ac" />
 
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-::::::::::::::::::::::::::::::::::::: callout
-
-Callout sections can highlight information.
-
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-[r-markdown]: https://rmarkdown.rstudio.com/
+- Check more information on: https://www.rcac.purdue.edu/knowledge/gfms
+- Contact rcac-help@purdue.edu if there is a popular GFMs you want to use and is not currently available on HPC Clusters
+- We will cover two case studies of Aurora and Prithvi-EO-2.0 in the 3rd Session today!
