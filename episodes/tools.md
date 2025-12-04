@@ -18,18 +18,46 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ## 1. Tools for GeoAI
 
+### 1.1 TorchGeo
+
+- A PyTorch library specifically designed for geospatial data.
+    - For GeoAI tasks
+    - Handle satellite imagery, aerial photos, and other geographically referenced data.
+- https://torchgeo.readthedocs.io/en/stable/tutorials/torchgeo.html
+
+### 1.2 TerraTorch
+
+- A fine-tuning and benchmarking toolkit for Geospatial Foundation Models. 
+- Built on top of PyTorch Lightning and TorchGeo.
+    - Uses TorchGeo for dataset management and extends the framework to provide a higher-level abstraction for fine-tuning and benchmarking.
+    - Streamlines the process of fine-tuning large pre-trained geospatial models for specific tasks. 
+- https://terrastackai.github.io/terratorch/stable/
+
 ## 2. Install Tools
 
-### HPC Cluster Anvil
-```cd $PROJECT``` 
+### 2.1 on HPC Cluster Anvil
+
+(1) Install the tools in your $PROJECT directory
+
+
+```cd $PROJECT```  
+
+
+(2) Load necessary modules, including `conda` and `cuda`
+
 
 ```module load modtree/gpu conda cuda/12.0.1```
 
-```conda create -p ./geo_env python=3.12```
+
+(3) Create and activate the conda environment 
+
+```conda create -p ./app/conda_env/geo_env python=3.12```
 
 ```conda activate ./geo_env```
 
 ```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
+
+(4) Install tools
 
 ```pip install terratorch```
 
@@ -41,7 +69,9 @@ exercises: 2
 # Name                    Version                   Build  Channel
 terratorch                1.1                    pypi_0    pypi
 ```
-`terratorch` automatically include `torchgeo`, ```conda list torchgeo```
+`terratorch` automatically include `torchgeo`, 
+
+```conda list torchgeo```
 
 ```
 # packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
@@ -50,7 +80,10 @@ terratorch                1.1                    pypi_0    pypi
 torchgeo                  0.7.0                    pypi_0    pypi 
 ```
 
+(5) Build a kernel for jupyter notebook
+
 ```conda install ipykernel```
+
 ```ipython kernel install --user --name=geo_env_kernel```
 
 Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel
@@ -77,7 +110,8 @@ copy and paste the url to webpage
 Open a new Terminal
 ```ssh h000 -L 8888:localhost:8888```
 
-### HPC Cluster Gautschi
+### 2.2 on HPC Cluster Gautschi
+
 ```cd $SCRATCH```
 
 ```module load conda cuda/12.6.0```
