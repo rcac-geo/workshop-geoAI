@@ -642,7 +642,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-tools"><p>Content from <a href="tools.html">Using Markdown</a></p>
 <hr>
-<p>Last updated on 2025-11-20 |
+<p>Last updated on 2025-12-04 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -677,36 +677,81 @@ challenge blocks</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<section><h2 class="section-heading" id="tools-for-geoai">1. Tools for GeoAI<a class="anchor" aria-label="anchor" href="#tools-for-geoai"></a>
+</h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="install-tools">2. Install Tools<a class="anchor" aria-label="anchor" href="#install-tools"></a>
 </h2>
 <hr class="half-width">
-<div class="section level4">
-<h4 id="geoai">GeoAI<a class="anchor" aria-label="anchor" href="#geoai"></a>
-</h4>
-<ul>
-<li>Geospatial Artificial Intelligence</li>
-<li>Give AI a “sense of place” and enabling it to understand and analyze
-the world through a spatial lens #### Geospatial Data</li>
-<li>Image VS Imagery</li>
-<li>Compared with Image, it has Coordinates Reference System (CRS)—a
-mapping to real-world locations.</li>
-<li>Imagery: remotely sensed data captured by satellites, aircraft,
-drones, or other sensors.</li>
-</ul>
+<div class="section level3">
+<h3 id="hpc-cluster-anvil">HPC Cluster Anvil<a class="anchor" aria-label="anchor" href="#hpc-cluster-anvil"></a>
+</h3>
+<p><code>cd $PROJECT</code></p>
+<p><code>module load modtree/gpu conda cuda/12.0.1</code></p>
+<p><code>conda create -p ./geo_env python=3.12</code></p>
+<p><code>conda activate ./geo_env</code></p>
+<p><code>(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:</code></p>
+<p><code>pip install terratorch</code></p>
+<p><code>conda list terratorch</code></p>
+<pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+terratorch                1.1                    pypi_0    pypi</code></pre>
+<p><code>terratorch</code> automatically include <code>torchgeo</code>,
+<code>conda list torchgeo</code></p>
+<pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+#
+# Name                    Version                   Build  Channel
+torchgeo                  0.7.0                    pypi_0    pypi </code></pre>
+<p><code>conda install ipykernel</code>
+<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<p>Installed kernelspec geo_env_kernel in
+/home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel</p>
+<p>Now Open thinLinc Desktop and open a Terminal
+<code>sinteractive -A nairrtest-ai -p ai -N1 -n7 --gpus-per-node=1 -t 1:00:00</code></p>
+<pre><code>salloc: Pending job allocation 13972179
+salloc: job 13972179 queued and waiting for resources
+salloc: job 13972179 has been allocated resources
+salloc: Granted job allocation 13972179
+salloc: Waiting for resource configuration
+salloc: Nodes g006 are ready for job
+
+x-xliu26@h001.anvil:[~] $ </code></pre>
+<p><code>module load jupyter</code> <code>jupyter notebook</code> copy
+and paste the url to webpage</p>
+<p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
 </div>
-</section><section><h2 class="section-heading" id="geoai-tasks">GeoAI tasks<a class="anchor" aria-label="anchor" href="#geoai-tasks"></a>
-</h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="foundation-models-on-geosciences-gfms">Foundation Models on Geosciences (GFMs)<a class="anchor" aria-label="anchor" href="#foundation-models-on-geosciences-gfms"></a>
-</h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="why-geoai-on-hpc-clusters">Why GeoAI on HPC clusters<a class="anchor" aria-label="anchor" href="#why-geoai-on-hpc-clusters"></a>
-</h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="geoai-datasets-and-gfms-available-on-anvil">GeoAI datasets and GFMs available on Anvil<a class="anchor" aria-label="anchor" href="#geoai-datasets-and-gfms-available-on-anvil"></a>
-</h2>
-<hr class="half-width">
+<div class="section level3">
+<h3 id="hpc-cluster-gautschi">HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#hpc-cluster-gautschi"></a>
+</h3>
+<p><code>cd $SCRATCH</code></p>
+<p><code>module load conda cuda/12.6.0</code></p>
+<p><code>conda create -p ./geo_env python=3.12</code></p>
+<p><code>conda activate ./geo_env</code></p>
+<p><code>(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:</code></p>
+<p><code>pip install terratorch</code>
+<code>conda list torchgeo</code></p>
+<p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel terratorch                1.1                     pypi_0    pypi</code>
+<code>terratorch</code> automatically include <code>torchgeo</code></p>
+<p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0                    pypi_0    pypi</code></p>
+<p><code>conda install ipykernel</code>
+<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<p><code>Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel</code></p>
+<p>Now Open thinLinc Desktop and open a Terminal
+<code>sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00</code></p>
+<pre><code>salloc: Granted job allocation 1119021
+salloc: Waiting for resource configuration
+salloc: Nodes h000 are ready for job
+
+liu4201@h000.gautschi:[~] $</code></pre>
+<p><code>module load jupyter</code> <code>jupyter notebook</code> copy
+and paste the url to webpage</p>
+<p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-cases"><p>Content from <a href="cases.html">Using Markdown</a></p>
+ -->
+</div>
+</section></section><section id="aio-cases"><p>Content from <a href="cases.html">Using Markdown</a></p>
 <hr>
 <p>Last updated on 2025-11-20 |
 
@@ -799,7 +844,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.3" class="external-link">sandpaper (0.17.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.8" class="external-link">varnish (1.0.8)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.3" class="external-link">sandpaper (0.17.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -822,8 +867,8 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2025-12-03",
-  "datePublished": "2025-12-03"
+  "dateModified": "2025-12-04",
+  "datePublished": "2025-12-04"
 }
 
   </script><script>
