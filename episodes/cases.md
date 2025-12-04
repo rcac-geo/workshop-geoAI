@@ -1,33 +1,63 @@
 ---
-title: "Using Markdown"
+title: "Case Studies"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- How do you use the tools you install on Anvil last session for your geoAI tasks
+- How do you use GFMs available on Anvil for your tasks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- A Case study of a single-task model with TorchGeo
+- A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
+- A Case study of GFMs: Aurora
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## 1. A Case study of a single-task model with TorchGeo
 
-#### GeoAI
-- Geospatial Artificial Intelligence
-- Give AI a "sense of place" and enabling it to understand and analyze the world through a spatial lens
-#### Geospatial Data
-- Image VS Imagery
-- Compared with Image, it has Coordinates Reference System (CRS)—a mapping to real-world locations.
-- Imagery: remotely sensed data captured by satellites, aircraft, drones, or other sensors. 
+### 1.1 Interactive Job
 
-## GeoAI tasks
-## Foundation Models on Geosciences (GFMs)
-## Why GeoAI on HPC clusters
-## GeoAI datasets and GFMs available on Anvil
+#### 1.1.1 Start interactive job and jupyter notebook
+
+#### 1.1.2 Copy the code below and run them cell by cell 
+
+## 2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
+
+### 2.1 Sbatch Job
+
+#### 2.1.1 Prepare Jobscript
+
+#### 2.1.2 Submit job and check status & output
+
+### 2.2 Interactive Job
+
+#### 2.2.1 Start interactive job and jupyter notebook
+
+#### 2.2.2 Copy the code below cell by cell and run
+
+## 3. A Case study of GFMs: Aurora
+
+### 3.1 Interactive Job
+
+#### 3.1.1 Start interactive job and jupyter notebook
+
+#### 3.1.2 Copy the code below and run them cell by cell 
+
+::::::::::::::::::::::::::::::::::::: exercise 
+
+## Which categories of task/problem mentioned in the first session do these three cases belong to?
+
+:::::::::::::::::::::::: solution 
+
+1 & 2: Classfication Problem-Semantic Segmentation
+3: Regression Problem-Time Series Forecasting  
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
