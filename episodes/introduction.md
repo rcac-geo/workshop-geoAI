@@ -144,4 +144,4 @@ exercises: 0
 
 - Check more information on: https://www.rcac.purdue.edu/knowledge/gfms
 - Contact rcac-help@purdue.edu if there is a popular GFMs you want to use and is not currently available on HPC Clusters
-- We will cover two case studies of Aurora and Prithvi-EO-2.0 in the 3rd Session today!
+- We will cover two case studies of [Aurora](https://rcac-geo.github.io/workshop-geoAI/cases.html#a-case-study-of-gfms-aurora) and [Prithvi-EO-2.0](https://rcac-geo.github.io/workshop-geoAI/cases.html#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0) in the 3rd Session:[Case Studies](https://rcac-geo.github.io/workshop-geoAI/cases.html#)today!
