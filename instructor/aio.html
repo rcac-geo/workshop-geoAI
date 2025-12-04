@@ -716,10 +716,10 @@ models for specific tasks. </li>
 </h2>
 <hr class="half-width">
 <div class="section level3">
-<h3 id="on-hpc-cluster-anvil">2.1 on HPC Cluster Anvil<a class="anchor" aria-label="anchor" href="#on-hpc-cluster-anvil"></a>
+<h3 id="install-on-hpc-cluster-anvil">2.1 Install on HPC Cluster Anvil<a class="anchor" aria-label="anchor" href="#install-on-hpc-cluster-anvil"></a>
 </h3>
 <ol style="list-style-type: decimal">
-<li>Install the tools in your $PROJECT directory</li>
+<li>Install the tools in your <code>$PROJECT</code> directory</li>
 </ol>
 <p><code>cd $PROJECT</code></p>
 <ol start="2" style="list-style-type: decimal">
@@ -743,9 +743,8 @@ models for specific tasks. </li>
 #
 # Name                    Version                   Build  Channel
 terratorch                1.1                    pypi_0    pypi</code></pre>
-<p><code>terratorch</code> automatically include
-<code>torchgeo</code>,</p>
-<p><code>conda list torchgeo</code></p>
+<p><code>terratorch</code> automatically include <code>torchgeo</code>:
+<code>conda list torchgeo</code></p>
 <pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
 #
 # Name                    Version                   Build  Channel
@@ -772,20 +771,40 @@ and paste the url to webpage</p>
 <p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
 </div>
 <div class="section level3">
-<h3 id="on-hpc-cluster-gautschi">2.2 on HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#on-hpc-cluster-gautschi"></a>
+<h3 id="install-on-hpc-cluster-gautschi">2.2 Install on HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#install-on-hpc-cluster-gautschi"></a>
 </h3>
+<ol style="list-style-type: decimal">
+<li>Install the tools in your <code>$SCRATCH</code> directory (Note:
+storage in <code>$SCRATCH</code> will be purged in 30 days without
+access; they need to backup to your depot space with <code>sync</code>
+command)</li>
+</ol>
 <p><code>cd $SCRATCH</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Load necessary modules, including <code>conda</code> and
+<code>cuda</code>
+</li>
+</ol>
 <p><code>module load conda cuda/12.6.0</code></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Create and activate the conda environment</li>
+</ol>
 <p><code>conda create -p ./geo_env python=3.12</code></p>
 <p><code>conda activate ./geo_env</code></p>
 <p><code>(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:</code></p>
-<p><code>pip install terratorch</code>
-<code>conda list torchgeo</code></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Install tools</li>
+</ol>
+<p><code>pip install terratorch</code></p>
 <p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel terratorch                1.1                     pypi_0    pypi</code>
-<code>terratorch</code> automatically include <code>torchgeo</code></p>
+<code>terratorch</code> automatically include <code>torchgeo</code>:
+<code>conda list torchgeo</code></p>
 <p><code># packages in environment at /scratch/gautschi/liu4201/geo_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0                    pypi_0    pypi</code></p>
-<p><code>conda install ipykernel</code>
-<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Build a kernel for jupyter notebook</li>
+</ol>
+<p><code>conda install ipykernel</code></p>
+<p><code>ipython kernel install --user --name=geo_env_kernel</code></p>
 <p><code>Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel</code></p>
 <p>Now Open thinLinc Desktop and open a Terminal
 <code>sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00</code></p>
