@@ -679,31 +679,82 @@ challenge blocks</li>
 </div>
 <section><h2 class="section-heading" id="tools-for-geoai">1. Tools for GeoAI<a class="anchor" aria-label="anchor" href="#tools-for-geoai"></a>
 </h2>
-<hr class="half-width"></section><section><h2 class="section-heading" id="install-tools">2. Install Tools<a class="anchor" aria-label="anchor" href="#install-tools"></a>
+<hr class="half-width">
+<div class="section level3">
+<h3 id="torchgeo">1.1 TorchGeo<a class="anchor" aria-label="anchor" href="#torchgeo"></a>
+</h3>
+<ul>
+<li>A PyTorch library specifically designed for geospatial data.
+<ul>
+<li>For GeoAI tasks</li>
+<li>Handle satellite imagery, aerial photos, and other geographically
+referenced data.</li>
+</ul>
+</li>
+<li><a href="https://torchgeo.readthedocs.io/en/stable/tutorials/torchgeo.html" class="external-link uri">https://torchgeo.readthedocs.io/en/stable/tutorials/torchgeo.html</a></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="terratorch">1.2 TerraTorch<a class="anchor" aria-label="anchor" href="#terratorch"></a>
+</h3>
+<ul>
+<li>A fine-tuning and benchmarking toolkit for Geospatial Foundation
+Models. </li>
+<li>Built on top of PyTorch Lightning and TorchGeo.
+<ul>
+<li>Uses TorchGeo for dataset management and extends the framework to
+provide a higher-level abstraction for fine-tuning and
+benchmarking.</li>
+<li>Streamlines the process of fine-tuning large pre-trained geospatial
+models for specific tasks. </li>
+</ul>
+</li>
+<li><a href="https://terrastackai.github.io/terratorch/stable/" class="external-link uri">https://terrastackai.github.io/terratorch/stable/</a></li>
+</ul>
+</div>
+</section><section><h2 class="section-heading" id="install-tools">2. Install Tools<a class="anchor" aria-label="anchor" href="#install-tools"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
-<h3 id="hpc-cluster-anvil">HPC Cluster Anvil<a class="anchor" aria-label="anchor" href="#hpc-cluster-anvil"></a>
+<h3 id="on-hpc-cluster-anvil">2.1 on HPC Cluster Anvil<a class="anchor" aria-label="anchor" href="#on-hpc-cluster-anvil"></a>
 </h3>
+<ol style="list-style-type: decimal">
+<li>Install the tools in your $PROJECT directory</li>
+</ol>
 <p><code>cd $PROJECT</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Load necessary modules, including <code>conda</code> and
+<code>cuda</code>
+</li>
+</ol>
 <p><code>module load modtree/gpu conda cuda/12.0.1</code></p>
-<p><code>conda create -p ./geo_env python=3.12</code></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Create and activate the conda environment</li>
+</ol>
+<p><code>conda create -p ./app/conda_env/geo_env python=3.12</code></p>
 <p><code>conda activate ./geo_env</code></p>
 <p><code>(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:</code></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Install tools</li>
+</ol>
 <p><code>pip install terratorch</code></p>
 <p><code>conda list terratorch</code></p>
 <pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
 #
 # Name                    Version                   Build  Channel
 terratorch                1.1                    pypi_0    pypi</code></pre>
-<p><code>terratorch</code> automatically include <code>torchgeo</code>,
-<code>conda list torchgeo</code></p>
+<p><code>terratorch</code> automatically include
+<code>torchgeo</code>,</p>
+<p><code>conda list torchgeo</code></p>
 <pre><code># packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
 #
 # Name                    Version                   Build  Channel
 torchgeo                  0.7.0                    pypi_0    pypi </code></pre>
-<p><code>conda install ipykernel</code>
-<code>ipython kernel install --user --name=geo_env_kernel</code></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Build a kernel for jupyter notebook</li>
+</ol>
+<p><code>conda install ipykernel</code></p>
+<p><code>ipython kernel install --user --name=geo_env_kernel</code></p>
 <p>Installed kernelspec geo_env_kernel in
 /home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel</p>
 <p>Now Open thinLinc Desktop and open a Terminal
@@ -721,7 +772,7 @@ and paste the url to webpage</p>
 <p>Open a new Terminal <code>ssh h000 -L 8888:localhost:8888</code></p>
 </div>
 <div class="section level3">
-<h3 id="hpc-cluster-gautschi">HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#hpc-cluster-gautschi"></a>
+<h3 id="on-hpc-cluster-gautschi">2.2 on HPC Cluster Gautschi<a class="anchor" aria-label="anchor" href="#on-hpc-cluster-gautschi"></a>
 </h3>
 <p><code>cd $SCRATCH</code></p>
 <p><code>module load conda cuda/12.6.0</code></p>
