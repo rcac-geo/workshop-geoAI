@@ -237,7 +237,6 @@
       <div class="accordion-body">
         <ul><li><a href="#a-case-study-of-a-single-task-model-with-torchgeo">1. A Case study of a single-task model with TorchGeo</a></li>
 <li><a href="#a-case-study-of-gfms-with-terratorch-prithvi-eo-2.0">2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0</a></li>
-<li><a href="#a-case-study-of-gfms-aurora">3. A Case study of GFMs: Aurora</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -302,7 +301,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Studies</h1>
-        <p>Last updated on 2025-12-04 |
+        <p>Last updated on 2025-12-08 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -354,6 +353,8 @@ for your geoAI tasks</li>
 </section><section><h2 class="section-heading" id="a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0">2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0<a class="anchor" aria-label="anchor" href="#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="load-prithvi-eo-2-0-model">2.0 Load Prithvi-EO-2.0 Model<a class="anchor" aria-label="anchor" href="#load-prithvi-eo-2-0-model"></a></h3>
+<pre><code>module load gfms
+module load Prithvi-EO-2.0/300M-TL-2025-03-24</code></pre>
 </div>
 <div class="section level3">
 <h3 id="sbatch-job">2.1 Sbatch Job<a class="anchor" aria-label="anchor" href="#sbatch-job"></a></h3>
@@ -367,20 +368,73 @@ for your geoAI tasks</li>
 <div class="section level3">
 <h3 id="interactive-job-1">2.2 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-1"></a></h3>
 <div class="section level4">
-<h4 id="start-interactive-job-and-jupyter-notebook-1">2.2.1 Start interactive job and jupyter notebook<a class="anchor" aria-label="anchor" href="#start-interactive-job-and-jupyter-notebook-1"></a></h4>
+<h4 id="use-gpu">2.2.1 Use GPU<a class="anchor" aria-label="anchor" href="#use-gpu"></a></h4>
+<ol style="list-style-type: decimal"><li>Load modules:</li>
+</ol><p>```module load modtree/gpu cuda/12.0.1 conda</p>
+<p>module load datasets module load
+geoai/multi-temporal-crop-classification</p>
+<p>module load gfms module load Prithvi-EO-2.0/300M-TL-2025-03-24 module
+load jupyter</p>
+<pre><code>(2) Get GPU jobs:
+</code></pre>
+<p>sinteractive -A tra250034-gpu -N1 -c32 -p gpu –gpus-per-node=1 -t
+30:00</p>
+<pre><code>you will see the information which means the GPU node is ready to use as below:
+</code></pre>
+<p>salloc: Pending job allocation 14571723 salloc: job 14571723 queued
+and waiting for resources salloc: job 14571723 has been allocated
+resources salloc: Granted job allocation 14571723 salloc: Waiting for
+resource configuration salloc: Nodes g007 are ready for job</p>
+<pre><code>
+(3) Open jupyter notebook and run cell by cell in `terratorch_gfms_case.ipynb`, it will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available.
+
+(4) you could check the GPU usage as below:
+</code></pre>
+<p><a href="mailto:x-xliu26@login06.anvil" class="email">x-xliu26@login06.anvil</a>:[~] $ ssh g007</p>
+<p><a href="mailto:x-xliu26@g007.anvil" class="email">x-xliu26@g007.anvil</a>:[~] $ nvidia-smi Mon Dec 8
+14:14:56 2025<br>
++—————————————————————————————–+ | NVIDIA-SMI 560.35.03 Driver Version:
+560.35.03 CUDA Version: 12.6 | |—————————————–+————————+———————-+ | GPU
+Name Persistence-M | Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp
+Perf Pwr:Usage/Cap | Memory-Usage | GPU-Util Compute M. | | | | MIG M. |
+|=========================================+========================+======================|
+| 0 NVIDIA A100-SXM4-40GB On | 00000000:C1:00.0 Off | 0 | | N/A 42C P0
+367W / 400W | 16989MiB / 40960MiB | 91% Default | | | | Disabled |
++—————————————–+————————+———————-+</p>
+<p>+—————————————————————————————–+ | Processes: | | GPU GI CI PID Type
+Process name GPU Memory | | ID ID Usage |
+|=========================================================================================|
+| 0 N/A N/A 2195239 C …pp/conda_env/geo_env/bin/python3.12 16978MiB
+|</p>
+<pre><code><span></span>
+<span><span class="co">#### 2.2.2 Use CPU</span></span></code></pre>
+<p>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</p>
+<pre><code>
+
+## 3. A Case study of GFMs: Aurora
+
+### 3.0 Load Aurora Model
+
+#### 2.0.1 Use GPU
+
+```module load modtree/gpu cuda/12.0.1
+module load gfms
+module load Aurora</code></pre>
 </div>
 <div class="section level4">
-<h4 id="copy-the-code-below-cell-by-cell-and-run">2.2.2 Copy the code below cell by cell and run<a class="anchor" aria-label="anchor" href="#copy-the-code-below-cell-by-cell-and-run"></a></h4>
+<h4 id="use-cpu">2.0.2 Use CPU<a class="anchor" aria-label="anchor" href="#use-cpu"></a></h4>
+<pre><code>module load gfms
+module load Aurora</code></pre>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="a-case-study-of-gfms-aurora">3. A Case study of GFMs: Aurora<a class="anchor" aria-label="anchor" href="#a-case-study-of-gfms-aurora"></a></h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="load-aurora-model">3.0 Load Aurora Model<a class="anchor" aria-label="anchor" href="#load-aurora-model"></a></h3>
 </div>
 <div class="section level3">
 <h3 id="interactive-job-2">3.1 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-2"></a></h3>
 <div class="section level4">
-<h4 id="start-interactive-job-and-jupyter-notebook-2">3.1.1 Start interactive job and jupyter notebook<a class="anchor" aria-label="anchor" href="#start-interactive-job-and-jupyter-notebook-2"></a></h4>
+<h4 id="start-interactive-job-and-jupyter-notebook-1">3.1.1 Start interactive job and jupyter notebook<a class="anchor" aria-label="anchor" href="#start-interactive-job-and-jupyter-notebook-1"></a></h4>
+<ol style="list-style-type: decimal"><li>Use the Centralized Aurora Kernel</li>
+</ol><pre><code>module load jupyter
+module load gfms
+module load Aurora</code></pre>
 </div>
 <div class="section level4">
 <h4 id="copy-the-code-below-and-run-them-cell-by-cell-1">3.1.2 Copy the code below and run them cell by cell<a class="anchor" aria-label="anchor" href="#copy-the-code-below-and-run-them-cell-by-cell-1"></a></h4>
@@ -467,8 +521,8 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/instructor/cases.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/instructor/cases.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2025-12-04",
-  "datePublished": "2025-12-04"
+  "dateModified": "2025-12-08",
+  "datePublished": "2025-12-08"
 }
 
   </script><script>
