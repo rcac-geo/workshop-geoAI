@@ -44,11 +44,10 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
 ### 2.2 Interactive Job
 
-#### 2.2.1 Use GPU
-
 (1) Load modules:
 
-```module load modtree/gpu cuda/12.0.1 conda
+```
+module load modtree/gpu cuda/12.0.1 conda
 
 module load datasets
 module load geoai/multi-temporal-crop-classification
@@ -75,7 +74,10 @@ salloc: Nodes g007 are ready for job
 
 (3) Open jupyter notebook and run cell by cell in `terratorch_gfms_case.ipynb`, it will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. 
 
-(4) you could check the GPU usage as below:
+start jupyter notebook by running
+```jupyter notebook``` in the terminal
+
+(4) you could check the GPU usage with running the commands below in a new terminal:
 
 ```
 x-xliu26@login06.anvil:[~] $ ssh g007
@@ -102,25 +104,10 @@ Mon Dec  8 14:14:56 2025
 |    0   N/A  N/A   2195239      C   ...pp/conda_env/geo_env/bin/python3.12      16978MiB |
 ```
 
-#### 2.2.2 Use CPU
-
-```
-sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
-```
-
 
 ## 3. A Case study of GFMs: Aurora
 
 ### 3.0 Load Aurora Model
-
-#### 2.0.1 Use GPU
-
-```module load modtree/gpu cuda/12.0.1 
-module load gfms
-module load Aurora
-```
-
-#### 2.0.2 Use CPU
 
 ```
 module load gfms
@@ -137,6 +124,9 @@ module load Aurora
 module load jupyter
 module load gfms
 module load Aurora
+```
+```
+sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
 ```
 
 #### 3.1.2 Copy the code below and run them cell by cell 
