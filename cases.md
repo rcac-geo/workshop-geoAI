@@ -29,20 +29,20 @@ exercises: 2
 
 ## 2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
 
-### 2.0 Load Prithvi-EO-2.0 Model
+### 2.1 Load Prithvi-EO-2.0 Model
 
 ```
 module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24
 ```
 
-### 2.1 Sbatch Job
+### 2.2 Sbatch Job
 
 (1) Prepare Jobscript
 
 (2) Submit job and check status & output
 
-### 2.2 Interactive Job
+### 2.3 Interactive Job
 
 (1) Load modules:
 
@@ -72,12 +72,23 @@ salloc: Waiting for resource configuration
 salloc: Nodes g007 are ready for job
 ```
 
-(3) Open jupyter notebook and run cell by cell in `terratorch_gfms_case.ipynb`, it will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. 
+(3) Open jupyter notebook and Use the Kernel you built in last session
 
-start jupyter notebook by running
+- start jupyter notebook by running
+  
 ```jupyter notebook``` in the terminal
 
-(4) you could check the GPU usage with running the commands below in a new terminal:
+- Select the kernel you built in last session (`geo_env` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(4) run cell by cell in `terratorch_gfms_case.ipynb` 
+
+It will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. 
+
+
+(5) you could check the GPU usage with running the commands below in a new terminal:
+
+Based on `salloc: Nodes g007 are ready for job`, you will go to check on `g007` as below. Please change it if yours is different.
 
 ```
 x-xliu26@login06.anvil:[~] $ ssh g007
