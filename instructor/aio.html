@@ -825,7 +825,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-cases"><p>Content from <a href="cases.html">Case Studies</a></p>
 <hr>
-<p>Last updated on 2025-12-08 |
+<p>Last updated on 2025-12-17 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -840,8 +840,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How do you use the tools you installed on <a href="https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools" class="external-link">tools</a>
-for your geoAI tasks</li>
+<li>How do you use the tools you installed on <a href="https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools" class="external-link">last
+sesssion</a> for your geoAI tasks</li>
 <li>How do you use GFMs available on Anvil for your tasks</li>
 </ul>
 </div>
@@ -888,14 +888,10 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24</code></pre>
 <div class="section level3">
 <h3 id="sbatch-job">2.1 Sbatch Job<a class="anchor" aria-label="anchor" href="#sbatch-job"></a>
 </h3>
-<div class="section level4">
-<h4 id="prepare-jobscript">2.1.1 Prepare Jobscript<a class="anchor" aria-label="anchor" href="#prepare-jobscript"></a>
-</h4>
-</div>
-<div class="section level4">
-<h4 id="submit-job-and-check-status-output">2.1.2 Submit job and check status &amp; output<a class="anchor" aria-label="anchor" href="#submit-job-and-check-status-output"></a>
-</h4>
-</div>
+<ol style="list-style-type: decimal">
+<li><p>Prepare Jobscript</p></li>
+<li><p>Submit job and check status &amp; output</p></li>
+</ol>
 </div>
 <div class="section level3">
 <h3 id="interactive-job-1">2.2 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-1"></a>
@@ -917,7 +913,7 @@ module load jupyter</code></pre>
 <pre><code>sinteractive -A tra250034-gpu -N1 -c32 -p gpu --gpus-per-node=1 -t 30:00</code></pre>
 <p>you will see the information which means the GPU node is ready to use
 as below:</p>
-<pre><code>salloc: Pending job allocation 14571723
+<pre><code>salloc: job allocation 14571723
 salloc: job 14571723 queued and waiting for resources
 salloc: job 14571723 has been allocated resources
 salloc: Granted job allocation 14571723
@@ -963,29 +959,48 @@ Mon Dec  8 14:14:56 2025
 </h2>
 <hr class="half-width">
 <div class="section level3">
-<h3 id="load-aurora-model">3.0 Load Aurora Model<a class="anchor" aria-label="anchor" href="#load-aurora-model"></a>
+<h3 id="load-aurora-model">3.1 Load Aurora Model<a class="anchor" aria-label="anchor" href="#load-aurora-model"></a>
 </h3>
 <pre><code>module load gfms
 module load Aurora</code></pre>
 </div>
 <div class="section level3">
-<h3 id="interactive-job-2">3.1 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-2"></a>
+<h3 id="interactive-job-2">3.2 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-2"></a>
 </h3>
-<div class="section level4">
-<h4 id="start-interactive-job-and-jupyter-notebook-1">3.1.1 Start interactive job and jupyter notebook<a class="anchor" aria-label="anchor" href="#start-interactive-job-and-jupyter-notebook-1"></a>
-</h4>
 <ol style="list-style-type: decimal">
-<li>Use the Centralized Aurora Kernel</li>
+<li>Start interactive job</li>
 </ol>
 <pre><code>module load jupyter
 module load gfms
 module load Aurora</code></pre>
 <pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
+</ol>
+<ul>
+<li>start jupyter notebook by running</li>
+</ul>
+<p><code>jupyter notebook</code> in the terminal</p>
+<ul>
+<li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
+notebook is up.</li>
+</ul>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level4">
-<h4 id="copy-the-code-below-and-run-them-cell-by-cell-1">3.1.2 Copy the code below and run them cell by cell<a class="anchor" aria-label="anchor" href="#copy-the-code-below-and-run-them-cell-by-cell-1"></a>
-</h4>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note the module jupyter must be loaded before Aurora to have the
+<code>gfms_aurora</code> kernel to be found.</p>
 </div>
+</div>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>run cell by cell in <code>gfm_aurora-cpu.ipynb</code>
+</li>
+</ol>
 <div class="section level4 exercise">
 <h4 id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to">Which categories of task/problem mentioned in the first session do
 these three cases belong to?<a class="anchor" aria-label="anchor" href="#which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to"></a>
@@ -1059,8 +1074,8 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2025-12-16",
-  "datePublished": "2025-12-16"
+  "dateModified": "2025-12-17",
+  "datePublished": "2025-12-17"
 }
 
   </script><script>
