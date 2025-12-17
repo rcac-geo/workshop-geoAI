@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you use the tools you installed on [tools](https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools) for your geoAI tasks
+- How do you use the tools you installed on [last sesssion](https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools) for your geoAI tasks
 - How do you use GFMs available on Anvil for your tasks
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -38,9 +38,9 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
 ### 2.1 Sbatch Job
 
-#### 2.1.1 Prepare Jobscript
+(1) Prepare Jobscript
 
-#### 2.1.2 Submit job and check status & output
+(2) Submit job and check status & output
 
 ### 2.2 Interactive Job
 
@@ -64,7 +64,7 @@ sinteractive -A tra250034-gpu -N1 -c32 -p gpu --gpus-per-node=1 -t 30:00
 you will see the information which means the GPU node is ready to use as below:
 
 ```
-salloc: Pending job allocation 14571723
+salloc: job allocation 14571723
 salloc: job 14571723 queued and waiting for resources
 salloc: job 14571723 has been allocated resources
 salloc: Granted job allocation 14571723
@@ -107,18 +107,16 @@ Mon Dec  8 14:14:56 2025
 
 ## 3. A Case study of GFMs: Aurora
 
-### 3.0 Load Aurora Model
+### 3.1 Load Aurora Model
 
 ```
 module load gfms
 module load Aurora
 ```
 
-### 3.1 Interactive Job
+### 3.2 Interactive Job
 
-#### 3.1.1 Start interactive job and jupyter notebook
-
-(1) Use the Centralized Aurora Kernel
+(1) Start interactive job
 
 ```
 module load jupyter
@@ -129,7 +127,24 @@ module load Aurora
 sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
 ```
 
-#### 3.1.2 Copy the code below and run them cell by cell 
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select `gfms_aurora` from the kernel list, after jupyter notebook is up.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` kernel to be found. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+(3) run cell by cell in `gfm_aurora-cpu.ipynb`
+
+
+
 
 ::::::::::::::::::::::::::::::::::::: exercise 
 
