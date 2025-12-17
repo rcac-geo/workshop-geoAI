@@ -40,7 +40,42 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
 (1) Prepare Jobscript
 
+- Build a jobscript `train.gpujob`, for example, you could run the command `vim  train.gpujob` and copy & paste the code below:
+
+```
+#!/bin/sh -l
+# FILENAME:  myjobsubmissionfile
+
+#SBATCH -A asc170016-gpu
+#SBATCH -p gpu # the default queue is "shared" queue
+#SBATCH -N 1
+#SBATCH -c 64
+#SBATCH --gpus-per-node=2
+#SBATCH -t 1:30:00
+#SBATCH --job-name mgpujob
+
+module load modtree/gpu cuda/12.0.1 conda
+
+module load datasets
+module load geoai/multi-temporal-crop-classification
+
+module load gfms
+module load Prithvi-EO-2.0/300M-TL-2025-03-24
+
+conda activate $RCAC_PROJECT/$(whoami)/app/conda_env/geo_env
+cd $RCAC_PROJECT/$(whoami)/data/workshop/geoAI
+
+python train.py
+```
+- You will use the `train.py` provided in the workshop, where I have already set the EPOCHS as 10 for shorter time ((~15 mins) need. Feel free to reduce it to save more time for this workshop, or increase it to see better performance later.
+
+
 (2) Submit job and check status & output
+
+- submit the job by running `sbatch train.gpujob` in the terminal
+- run `squeue --me` in the terminal to check the job status, but note it will return empty after the job finished.
+- you could also check the job status by running `jobinfo YOUR_JOB_ID` in the terminal (replace YOUR_JOB_ID with your job id).
+  
 
 ### 2.3 Interactive Job
 
@@ -78,7 +113,7 @@ salloc: Nodes g007 are ready for job
   
 ```jupyter notebook``` in the terminal
 
-- Select the kernel you built in last session (`geo_env` for the give example) from the kernel list, after jupyter notebook is up.
+- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
 
 (4) run cell by cell in `terratorch_gfms_case.ipynb` 
@@ -153,6 +188,8 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 (3) run cell by cell in `gfm_aurora-cpu.ipynb`
+
+It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
 
 
 
