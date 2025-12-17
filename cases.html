@@ -351,17 +351,17 @@ sesssion</a> for your geoAI tasks</li>
 </div>
 </section><section><h2 class="section-heading" id="a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0">2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0<a class="anchor" aria-label="anchor" href="#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0"></a></h2>
 <hr class="half-width"><div class="section level3">
-<h3 id="load-prithvi-eo-2-0-model">2.0 Load Prithvi-EO-2.0 Model<a class="anchor" aria-label="anchor" href="#load-prithvi-eo-2-0-model"></a></h3>
+<h3 id="load-prithvi-eo-2-0-model">2.1 Load Prithvi-EO-2.0 Model<a class="anchor" aria-label="anchor" href="#load-prithvi-eo-2-0-model"></a></h3>
 <pre><code>module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24</code></pre>
 </div>
 <div class="section level3">
-<h3 id="sbatch-job">2.1 Sbatch Job<a class="anchor" aria-label="anchor" href="#sbatch-job"></a></h3>
+<h3 id="sbatch-job">2.2 Sbatch Job<a class="anchor" aria-label="anchor" href="#sbatch-job"></a></h3>
 <ol style="list-style-type: decimal"><li><p>Prepare Jobscript</p></li>
 <li><p>Submit job and check status &amp; output</p></li>
 </ol></div>
 <div class="section level3">
-<h3 id="interactive-job-1">2.2 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-1"></a></h3>
+<h3 id="interactive-job-1">2.3 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-1"></a></h3>
 <ol style="list-style-type: decimal"><li>Load modules:</li>
 </ol><pre><code>module load modtree/gpu cuda/12.0.1 conda
 
@@ -381,16 +381,25 @@ salloc: job 14571723 has been allocated resources
 salloc: Granted job allocation 14571723
 salloc: Waiting for resource configuration
 salloc: Nodes g007 are ready for job</code></pre>
-<ol start="3" style="list-style-type: decimal"><li>Open jupyter notebook and run cell by cell in
-<code>terratorch_gfms_case.ipynb</code>, it will take ~15 mins to train
-10 epochs. You could reduce <code>EPOCHS = 10</code> in cell 3 to save
-more time, or increase it after the workshop to achieve better
-performance when more GPUs are available.</li>
-</ol><p>start jupyter notebook by running <code>jupyter notebook</code> in
-the terminal</p>
-<ol start="4" style="list-style-type: decimal"><li>you could check the GPU usage with running the commands below in a
+<ol start="3" style="list-style-type: decimal"><li>Open jupyter notebook and Use the Kernel you built in last
+session</li>
+</ol><ul><li>start jupyter notebook by running</li>
+</ul><p><code>jupyter notebook</code> in the terminal</p>
+<ul><li>Select the kernel you built in last session (<code>geo_env</code>
+for the give example) from the kernel list, after jupyter notebook is
+up.</li>
+</ul><ol start="4" style="list-style-type: decimal"><li>run cell by cell in <code>terratorch_gfms_case.ipynb</code>
+</li>
+</ol><p>It will take ~15 mins to train 10 epochs. You could reduce
+<code>EPOCHS = 10</code> in cell 3 to save more time, or increase it
+after the workshop to achieve better performance when more GPUs are
+available.</p>
+<ol start="5" style="list-style-type: decimal"><li>you could check the GPU usage with running the commands below in a
 new terminal:</li>
-</ol><pre><code>x-xliu26@login06.anvil:[~] $ ssh g007
+</ol><p>Based on <code>salloc: Nodes g007 are ready for job</code>, you will
+go to check on <code>g007</code> as below. Please change it if yours is
+different.</p>
+<pre><code>x-xliu26@login06.anvil:[~] $ ssh g007
 
 x-xliu26@g007.anvil:[~] $ nvidia-smi
 Mon Dec  8 14:14:56 2025
