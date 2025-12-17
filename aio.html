@@ -884,9 +884,54 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24</code></pre>
 <h3 id="sbatch-job">2.2 Sbatch Job<a class="anchor" aria-label="anchor" href="#sbatch-job"></a>
 </h3>
 <ol style="list-style-type: decimal">
-<li><p>Prepare Jobscript</p></li>
-<li><p>Submit job and check status &amp; output</p></li>
+<li>Prepare Jobscript</li>
 </ol>
+<ul>
+<li>Build a jobscript <code>train.gpujob</code>, for example, you could
+run the command <code>vim  train.gpujob</code> and copy &amp; paste the
+code below:</li>
+</ul>
+<pre><code>#!/bin/sh -l
+# FILENAME:  myjobsubmissionfile
+
+#SBATCH -A asc170016-gpu
+#SBATCH -p gpu # the default queue is "shared" queue
+#SBATCH -N 1
+#SBATCH -c 64
+#SBATCH --gpus-per-node=2
+#SBATCH -t 1:30:00
+#SBATCH --job-name mgpujob
+
+module load modtree/gpu cuda/12.0.1 conda
+
+module load datasets
+module load geoai/multi-temporal-crop-classification
+
+module load gfms
+module load Prithvi-EO-2.0/300M-TL-2025-03-24
+
+conda activate $RCAC_PROJECT/$(whoami)/app/conda_env/geo_env
+cd $RCAC_PROJECT/$(whoami)/data/workshop/geoAI
+
+python train.py</code></pre>
+<ul>
+<li>You will use the <code>train.py</code> provided in the workshop,
+where I have already set the EPOCHS as 10 for shorter time ((~15 mins)
+need. Feel free to reduce it to save more time for this workshop, or
+increase it to see better performance later.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Submit job and check status &amp; output</li>
+</ol>
+<ul>
+<li>submit the job by running <code>sbatch train.gpujob</code> in the
+terminal</li>
+<li>run <code>squeue --me</code> in the terminal to check the job
+status, but note it will return empty after the job finished.</li>
+<li>you could also check the job status by running
+<code>jobinfo YOUR_JOB_ID</code> in the terminal (replace YOUR_JOB_ID
+with your job id).</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="interactive-job-1">2.3 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-1"></a>
@@ -923,9 +968,9 @@ session</li>
 </ul>
 <p><code>jupyter notebook</code> in the terminal</p>
 <ul>
-<li>Select the kernel you built in last session (<code>geo_env</code>
-for the give example) from the kernel list, after jupyter notebook is
-up.</li>
+<li>Select the kernel you built in last session
+(<code>geo_env_kernel</code> for the give example) from the kernel list,
+after jupyter notebook is up.</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
 <li>run cell by cell in <code>terratorch_gfms_case.ipynb</code>
@@ -1011,6 +1056,9 @@ notebook is up.</li>
 <li>run cell by cell in <code>gfm_aurora-cpu.ipynb</code>
 </li>
 </ol>
+<p>It will take ~5 min to finishi the inference on a whole cpu node. It
+will be very fast if you request a interactive job with GPU available
+and run <code>gfm_aurora-gpu.ipynb</code>.</p>
 <div class="section level4 exercise">
 <h4 id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to">Which categories of task/problem mentioned in the first session do
 these three cases belong to?<a class="anchor" aria-label="anchor" href="#which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to"></a>
@@ -1020,7 +1068,7 @@ these three cases belong to?<a class="anchor" aria-label="anchor" href="#which-c
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
