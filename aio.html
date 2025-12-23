@@ -821,7 +821,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-cases"><p>Content from <a href="cases.html">Case Studies</a></p>
 <hr>
-<p>Last updated on 2025-12-17 |
+<p>Last updated on 2025-12-23 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -862,9 +862,46 @@ sesssion</a> for your geoAI tasks</li>
 <div class="section level3">
 <h3 id="interactive-job">1.1 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job"></a>
 </h3>
-<div class="section level4">
-<h4 id="start-interactive-job-and-jupyter-notebook">1.1.1 Start interactive job and jupyter notebook<a class="anchor" aria-label="anchor" href="#start-interactive-job-and-jupyter-notebook"></a>
-</h4>
+<ol style="list-style-type: decimal">
+<li>Load modules:</li>
+</ol>
+<pre><code>module load jupyter</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Start interactive job</li>
+</ol>
+<pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
+<p>salloc: Pending job allocation 14771023 salloc: job 14771023 queued
+and waiting for resources salloc: job 14771023 has been allocated
+resources salloc: Granted job allocation 14771023 salloc: Waiting for
+resource configuration salloc: Nodes a600 are ready for job</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
+</ol>
+<ul>
+<li>start jupyter notebook by running</li>
+</ul>
+<p><code>jupyter notebook</code> in the terminal</p>
+<ul>
+<li>Select the kernel you built in last session
+(<code>geo_env_kernel</code> for the give example) from the kernel list,
+after jupyter notebook is up.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>run cell by cell in <code>torchgeo_case-cpu.ipynb</code>
+</li>
+</ol>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note if GPU is not available, code is implemented to have just make 1
+pass and limit the size of the datasets. Could compared the performance
+of more training with GPU in <code>torchgeo_case.ipynb</code></p>
+</div>
+</div>
 </div>
 <div class="section level4">
 <h4 id="copy-the-code-below-and-run-them-cell-by-cell">1.1.2 Copy the code below and run them cell by cell<a class="anchor" aria-label="anchor" href="#copy-the-code-below-and-run-them-cell-by-cell"></a>
@@ -897,8 +934,8 @@ code below:</li>
 #SBATCH -A asc170016-gpu
 #SBATCH -p gpu # the default queue is "shared" queue
 #SBATCH -N 1
-#SBATCH -c 64
-#SBATCH --gpus-per-node=2
+#SBATCH -c 32
+#SBATCH --gpus-per-node=1
 #SBATCH -t 1:30:00
 #SBATCH --job-name mgpujob
 
@@ -1023,7 +1060,7 @@ module load Aurora</code></pre>
 <h3 id="interactive-job-2">3.2 Interactive Job<a class="anchor" aria-label="anchor" href="#interactive-job-2"></a>
 </h3>
 <ol style="list-style-type: decimal">
-<li>Start interactive job</li>
+<li>Load modules and Start interactive job as below:</li>
 </ol>
 <pre><code>module load jupyter
 module load gfms
@@ -1040,7 +1077,7 @@ module load Aurora</code></pre>
 <li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
 notebook is up.</li>
 </ul>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1059,10 +1096,19 @@ notebook is up.</li>
 <p>It will take ~5 min to finishi the inference on a whole cpu node. It
 will be very fast if you request a interactive job with GPU available
 and run <code>gfm_aurora-gpu.ipynb</code>.</p>
-<div class="section level4 exercise">
-<h4 id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to">Which categories of task/problem mentioned in the first session do
-these three cases belong to?<a class="anchor" aria-label="anchor" href="#which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to"></a>
-</h4>
+<div id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to" class="callout-inner">
+<h3 class="callout-title">Which categories of task/problem mentioned in
+the first session do these three cases belong to?</h3>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
@@ -1072,7 +1118,6 @@ these three cases belong to?<a class="anchor" aria-label="anchor" href="#which-c
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
-</div>
 </div>
 </div>
 </div>
