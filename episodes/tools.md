@@ -1,19 +1,20 @@
 ---
-title: "Using Markdown"
+title: "Install Tools for GeoAI on HPC"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What tools do you need for your geoAI tasks?
+- How to do install the tools for HPC?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Explain tools for GeoAI tasks
+- Demonstrate how to install GeoAI tools on your HPC account
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 ## 1. Tools for GeoAI
