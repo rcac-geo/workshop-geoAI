@@ -34,13 +34,14 @@ module load jupyter
 ```
 sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
 ```
+```
 salloc: Pending job allocation 14771023
 salloc: job 14771023 queued and waiting for resources
 salloc: job 14771023 has been allocated resources
 salloc: Granted job allocation 14771023
 salloc: Waiting for resource configuration
 salloc: Nodes a600 are ready for job
-
+```
 
 (3) Open jupyter notebook and Use the Centralized Aurora Kernel
 
@@ -55,7 +56,7 @@ salloc: Nodes a600 are ready for job
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-Note if GPU is not available, code is implemented to have just make 1 pass and limit the size of the datasets. Could compared the performance of more training with GPU in `torchgeo_case.ipynb` 
+Note if GPU is not available, the code is implemented to have just make 1 pass and limit the size of the datasets. You could see the figures of more training with GPU in `torchgeo_case.ipynb`, which has better performance. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
