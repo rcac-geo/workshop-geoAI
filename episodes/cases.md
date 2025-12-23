@@ -23,7 +23,42 @@ exercises: 2
 
 ### 1.1 Interactive Job
 
-#### 1.1.1 Start interactive job and jupyter notebook
+(1) Load modules:
+
+```
+module load jupyter
+```
+
+(2) Start interactive job 
+
+```
+sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
+```
+salloc: Pending job allocation 14771023
+salloc: job 14771023 queued and waiting for resources
+salloc: job 14771023 has been allocated resources
+salloc: Granted job allocation 14771023
+salloc: Waiting for resource configuration
+salloc: Nodes a600 are ready for job
+
+
+(3) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(3) run cell by cell in `torchgeo_case-cpu.ipynb`
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note if GPU is not available, code is implemented to have just make 1 pass and limit the size of the datasets. Could compared the performance of more training with GPU in `torchgeo_case.ipynb` 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 #### 1.1.2 Copy the code below and run them cell by cell 
 
@@ -49,8 +84,8 @@ module load Prithvi-EO-2.0/300M-TL-2025-03-24
 #SBATCH -A asc170016-gpu
 #SBATCH -p gpu # the default queue is "shared" queue
 #SBATCH -N 1
-#SBATCH -c 64
-#SBATCH --gpus-per-node=2
+#SBATCH -c 32
+#SBATCH --gpus-per-node=1
 #SBATCH -t 1:30:00
 #SBATCH --job-name mgpujob
 
@@ -162,7 +197,7 @@ module load Aurora
 
 ### 3.2 Interactive Job
 
-(1) Start interactive job
+(1) Load modules and Start interactive job as below:
 
 ```
 module load jupyter
@@ -194,7 +229,7 @@ It will take ~5 min to finishi the inference on a whole cpu node. It will be ver
 
 
 
-::::::::::::::::::::::::::::::::::::: exercise 
+::::::::::::::::::::::::::::::::::::: challenge 
 
 #### Which categories of task/problem mentioned in the first session do these three cases belong to?
 
