@@ -348,10 +348,12 @@ sesssion</a> for your geoAI tasks</li>
 </ol><pre><code>module load jupyter</code></pre>
 <ol start="2" style="list-style-type: decimal"><li>Start interactive job</li>
 </ol><pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
-<p>salloc: Pending job allocation 14771023 salloc: job 14771023 queued
-and waiting for resources salloc: job 14771023 has been allocated
-resources salloc: Granted job allocation 14771023 salloc: Waiting for
-resource configuration salloc: Nodes a600 are ready for job</p>
+<pre><code>salloc: Pending job allocation 14771023
+salloc: job 14771023 queued and waiting for resources
+salloc: job 14771023 has been allocated resources
+salloc: Granted job allocation 14771023
+salloc: Waiting for resource configuration
+salloc: Nodes a600 are ready for job</code></pre>
 <ol start="3" style="list-style-type: decimal"><li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
 </ol><ul><li>start jupyter notebook by running</li>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
@@ -367,9 +369,10 @@ after jupyter notebook is up.</li>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>Note if GPU is not available, code is implemented to have just make 1
-pass and limit the size of the datasets. Could compared the performance
-of more training with GPU in <code>torchgeo_case.ipynb</code></p>
+<p>Note if GPU is not available, the code is implemented to have just
+make 1 pass and limit the size of the datasets. You could see the
+figures of more training with GPU in <code>torchgeo_case.ipynb</code>,
+which has better performance.</p>
 </div>
 </div>
 </div>
@@ -540,7 +543,7 @@ the first session do these three cases belong to?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
