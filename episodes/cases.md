@@ -6,8 +6,8 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you use the tools you installed on [last sesssion](https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools) for your geoAI tasks
-- How do you use GFMs available on Anvil for your tasks
+- How do you use the tools you installed on [last sesssion](https://rcac-geo.github.io/workshop-geoAI/tools.html#install-tools) for your geoAI tasks?
+- How do you use GFMs available on Anvil for your tasks?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
