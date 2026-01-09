@@ -21,7 +21,7 @@ exercises: 2
 
 ## 1. A Case study of a single-task model with TorchGeo
 
-### 1.1 Interactive Job
+### 1.1 Interactive Job on the remote desktop with ThinLinc 
 
 (1) Load modules:
 
@@ -72,7 +72,7 @@ module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24
 ```
 
-### 2.2 Sbatch Job
+### 2.2 Batch Job
 
 (1) Prepare Jobscript
 
@@ -113,7 +113,7 @@ python train.py
 - you could also check the job status by running `jobinfo YOUR_JOB_ID` in the terminal (replace YOUR_JOB_ID with your job id).
   
 
-### 2.3 Interactive Job
+### 2.3 Interactive Job on the remote desktop with ThinLinc 
 
 (1) Load modules:
 
@@ -196,7 +196,7 @@ module load gfms
 module load Aurora
 ```
 
-### 3.2 Interactive Job
+### 3.2 Interactive Job on the remote desktop with ThinLinc 
 
 (1) Load modules and Start interactive job as below:
 
