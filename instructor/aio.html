@@ -870,23 +870,24 @@ sesssion</a> for your geoAI tasks?</li>
 </h2>
 <hr class="half-width">
 <div class="section level3">
-<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc">1.1 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-openondemand">1.1 Interactive Job on the remote desktop with OpenOnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-openondemand"></a>
 </h3>
+<ul>
+<li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">OpenOnDemand</a>, click
+“Desktop” under “Interactive Apps”. Input the allocation, Queue, and
+Wall Time and Cores as the picture below and hit Launch.
+<img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" class="figure"></p></li>
+<li><p>The Desktop Session will be queued and You could click Launch
+Desktop once it’s ready as the picture below.
+<img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" class="figure"></p></li>
+<li><p>click “Terminal Emulator” under “Applications” to open a Terminal
+and then follow the steps below.</p></li>
+</ul>
 <ol style="list-style-type: decimal">
 <li>Load modules:</li>
 </ol>
 <pre><code>module load jupyter</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Start interactive job</li>
-</ol>
-<pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
-<pre><code>salloc: Pending job allocation 14771023
-salloc: job 14771023 queued and waiting for resources
-salloc: job 14771023 has been allocated resources
-salloc: Granted job allocation 14771023
-salloc: Waiting for resource configuration
-salloc: Nodes a600 are ready for job</code></pre>
-<ol start="3" style="list-style-type: decimal">
 <li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
 </ol>
 <ul>
@@ -916,9 +917,55 @@ which has better performance.</p>
 </div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="copy-the-code-below-and-run-them-cell-by-cell">1.1.2 Copy the code below and run them cell by cell<a class="anchor" aria-label="anchor" href="#copy-the-code-below-and-run-them-cell-by-cell"></a>
-</h4>
+</div>
+<div class="section level3">
+<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc">1.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc"></a>
+</h3>
+<p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
+a Terminal and then follow the steps below.</p>
+<ol style="list-style-type: decimal">
+<li>Load modules:</li>
+</ol>
+<pre><code>module load jupyter</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Start interactive job</li>
+</ol>
+<pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
+<pre><code>salloc: Pending job allocation 14771023
+salloc: job 14771023 queued and waiting for resources
+salloc: job 14771023 has been allocated resources
+salloc: Granted job allocation 14771023
+salloc: Waiting for resource configuration
+salloc: Nodes a600 are ready for job</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
+</ol>
+<ul>
+<li>start jupyter notebook by running</li>
+</ul>
+<p><code>jupyter notebook</code> in the terminal</p>
+<ul>
+<li>Select the kernel you built in last session
+(<code>geo_env_kernel</code> for the give example) from the kernel list,
+after jupyter notebook is up.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>run cell by cell in <code>torchgeo_case-cpu.ipynb</code>
+</li>
+</ol>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note if GPU is not available, the code is implemented to have just
+make 1 pass and limit the size of the datasets. You could see the
+figures of more training with GPU in <code>torchgeo_case.ipynb</code>,
+which has better performance.</p>
+</div>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0">2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0<a class="anchor" aria-label="anchor" href="#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0"></a>
@@ -1090,7 +1137,7 @@ module load Aurora</code></pre>
 <li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
 notebook is up.</li>
 </ul>
-<div id="callout2" class="callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -1127,7 +1174,7 @@ the first session do these three cases belong to?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
