@@ -21,7 +21,44 @@ exercises: 2
 
 ## 1. A Case study of a single-task model with TorchGeo
 
-### 1.1 Interactive Job on the remote desktop with ThinLinc 
+### 1.1 Interactive Job on the remote desktop with OpenOnDemand 
+
+- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+<img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
+
+- The Desktop Session will be queued and You could click Launch Desktop once it's ready as the picture below. 
+  <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" />
+  
+- click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
+
+
+(1) Load modules:
+
+```
+module load jupyter
+```
+
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(3) run cell by cell in `torchgeo_case-cpu.ipynb`
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note if GPU is not available, the code is implemented to have just make 1 pass and limit the size of the datasets. You could see the figures of more training with GPU in `torchgeo_case.ipynb`, which has better performance. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+### 1.2 Interactive Job on the remote desktop with ThinLinc 
+
+With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
 
 (1) Load modules:
 
@@ -52,16 +89,13 @@ salloc: Nodes a600 are ready for job
 - Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
 
-(3) run cell by cell in `torchgeo_case-cpu.ipynb`
+(4) run cell by cell in `torchgeo_case-cpu.ipynb`
 
 ::::::::::::::::::::::::::::::::::::: callout
 
 Note if GPU is not available, the code is implemented to have just make 1 pass and limit the size of the datasets. You could see the figures of more training with GPU in `torchgeo_case.ipynb`, which has better performance. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-#### 1.1.2 Copy the code below and run them cell by cell 
 
 ## 2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
 
