@@ -16,6 +16,7 @@ exercises: 2
 - A Case study of a single-task model with TorchGeo
 - A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
 - A Case study of GFMs: Aurora
+- With the three case studies, you will learn three ways to perform GeoAI tasks on HPC: Batch jobs, Interactive jobs via OpenOndemand, and Interactive jobs via ThinLinc.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -26,7 +27,7 @@ exercises: 2
 - With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
 <img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
 
-- The Desktop Session will be queued and You could click Launch Desktop once it's ready as the picture below. 
+- The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
   <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" />
   
 - click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
@@ -145,9 +146,76 @@ python train.py
 - submit the job by running `sbatch train.gpujob` in the terminal
 - run `squeue --me` in the terminal to check the job status, but note it will return empty after the job finished.
 - you could also check the job status by running `jobinfo YOUR_JOB_ID` in the terminal (replace YOUR_JOB_ID with your job id).
-  
 
 ### 2.3 Interactive Job on the remote desktop with ThinLinc 
+
+- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time, Cores, and Number of GPUa as the picture below and hit Launch.
+<img width="719" height="425" alt="image" src="https://github.com/user-attachments/assets/2938bc00-af2a-4826-93bc-add579988c45" />
+
+- The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
+<img width="949" height="271" alt="image" src="https://github.com/user-attachments/assets/e434656d-78c1-4210-97af-6f93dd0b9b46" />
+  
+- click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below.
+  
+(1) Load modules:
+
+```
+module load modtree/gpu cuda/12.0.1 conda
+
+module load datasets
+module load geoai/multi-temporal-crop-classification
+
+module load gfms
+module load Prithvi-EO-2.0/300M-TL-2025-03-24
+module load jupyter
+```
+
+(2) Open jupyter notebook and Use the Kernel you built in last session
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(3) run cell by cell in `terratorch_gfms_case.ipynb` 
+
+It will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. 
+
+
+(4) you could check the GPU usage with running the commands below in a new terminal:
+
+Based on `salloc: Nodes g007 are ready for job`, you will go to check on `g007` as below. Please change it if yours is different.
+
+```
+x-xliu26@login06.anvil:[~] $ ssh g007
+
+x-xliu26@g007.anvil:[~] $ nvidia-smi
+Mon Dec  8 14:14:56 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   42C    P0            367W /  400W |   16989MiB /  40960MiB |     91%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   2195239      C   ...pp/conda_env/geo_env/bin/python3.12      16978MiB |
+```
+
+### 2.4 Interactive Job on the remote desktop with ThinLinc 
+
+With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
 
 (1) Load modules:
 
@@ -230,7 +298,46 @@ module load gfms
 module load Aurora
 ```
 
-### 3.2 Interactive Job on the remote desktop with ThinLinc 
+### 3.2 Interactive Job on the remote desktop with OpenOnDemand 
+
+- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+<img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
+
+- The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
+  <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" />
+  
+- click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below.
+  
+(1) Load modules and Start interactive job as below:
+
+```
+module load jupyter
+module load gfms
+module load Aurora
+```
+
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select `gfms_aurora` from the kernel list, after jupyter notebook is up.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` kernel to be found. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+(3) run cell by cell in `gfm_aurora-cpu.ipynb`
+
+It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
+
+
+### 3.3 Interactive Job on the remote desktop with ThinLinc 
+
+With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
 
 (1) Load modules and Start interactive job as below:
 
