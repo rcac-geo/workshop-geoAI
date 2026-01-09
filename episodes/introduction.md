@@ -129,6 +129,11 @@ exercises: 0
 
 ### 5.1 GeoAI datasets available on Anvil
 
+ - Go to https://ondemand.anvil.rcac.purdue.edu/ and log in with your ACCESS account.
+ - Click Clusters -> Anvil Shell ACCESS to open a terminal 
+
+<img width="1179" height="209" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" />
+
 #### 5.1.1 How to check what GeoAI datasets are avaiable on Anvil
 
 <img width="750" height="393" alt="image" src="https://github.com/user-attachments/assets/a7efa472-d554-408b-b616-e8952116a4b9" />
