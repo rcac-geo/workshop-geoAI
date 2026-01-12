@@ -16,15 +16,15 @@ exercises: 2
 - A Case study of a single-task model with TorchGeo
 - A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
 - A Case study of GFMs: Aurora
-- With the three case studies, you will learn three ways to perform GeoAI tasks on HPC: Batch jobs, Interactive jobs via OpenOndemand, and Interactive jobs via ThinLinc.
+- With the three case studies, you will learn three ways to perform GeoAI tasks on HPC: Batch jobs, Interactive jobs via Open OnDemand, and Interactive jobs via ThinLinc.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## 1. A Case study of a single-task model with TorchGeo
 
-### 1.1 Interactive Job on the remote desktop with OpenOnDemand 
+### 1.1 Interactive Job on the remote desktop with Open OnDemand 
 
-- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+- With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
 <img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
 
 - The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
@@ -147,9 +147,9 @@ python train.py
 - run `squeue --me` in the terminal to check the job status, but note it will return empty after the job finished.
 - you could also check the job status by running `jobinfo YOUR_JOB_ID` in the terminal (replace YOUR_JOB_ID with your job id).
 
-### 2.3 Interactive Job on the remote desktop with ThinLinc 
+### 2.3 Interactive Job on the remote desktop with Open OnDemand 
 
-- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time, Cores, and Number of GPUa as the picture below and hit Launch.
+- With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time, Cores, and Number of GPUa as the picture below and hit Launch.
 <img width="719" height="425" alt="image" src="https://github.com/user-attachments/assets/2938bc00-af2a-4826-93bc-add579988c45" />
 
 - The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
@@ -298,9 +298,9 @@ module load gfms
 module load Aurora
 ```
 
-### 3.2 Interactive Job on the remote desktop with OpenOnDemand 
+### 3.2 Interactive Job on the remote desktop with Open OnDemand 
 
-- With [OpenOnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+- With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
 <img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
 
 - The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
