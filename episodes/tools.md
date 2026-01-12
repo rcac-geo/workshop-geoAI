@@ -41,6 +41,7 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
 ### 2.1 Open OnDemand on Anvil
 
 (1) Go to https://ondemand.anvil.rcac.purdue.edu/ and log in with your ACCESS account.
+
 (2) Click Clusters -> Anvil Shell ACCESS to open a terminal as below picture show.
 
 <img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" />
@@ -48,14 +49,17 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
 ### 2.2 ThinLinc Desktop on Anvil
 
 (1) You need set up SSH Key first via Open OnDemand, the detailed steps are here: https://www.rcac.purdue.edu/knowledge/anvil/access/login/sshkeys
+
 (2) Download the [ThinLinc Client](https://www.cendio.com/thinlinc/download/) and install it to your Laptop.
+
 (3) Open ThinLinc Client, then go to Options -> Security, and select "Public key" in the "Anthentication method" as here:
   
    <img width="514" alt="Screenshot 2025-02-21 at 2 27 31 PM" src="https://github.com/user-attachments/assets/1e3e6a5b-8882-4546-b1e3-de313743ad61" />
    
 (4) Input Server, Username(replace XX with your train number) and Key(correct it with your path of key) like here:
    
-   <img width="469" alt="Screenshot 2025-02-21 at 2 27 11 PM" src="https://github.com/user-attachments/assets/7889bdce-6cbd-4cf0-a2eb-a585d83489c4" />
+  <img width="474" height="289" alt="image" src="https://github.com/user-attachments/assets/19be22fc-b29c-4cb0-8ee9-90d09a611879" />
+
    
 (5) Hit "Connect".
 
