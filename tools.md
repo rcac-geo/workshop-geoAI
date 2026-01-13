@@ -34,9 +34,53 @@ exercises: 2
     - Streamlines the process of fine-tuning large pre-trained geospatial models for specific tasks. 
 - https://terrastackai.github.io/terratorch/stable/
 
-## 2. Install Tools
+## 2. Logging In to HPC Clusters
 
-### 2.1 Install on HPC Cluster Anvil
+Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/access/obtaining_an_account)) is ready on regular RCAC HPC clusters, there are three ways for lgging in: the SSH (Secure Shell), ThinLinc, and Open OnDemand. The SSH and ThinLinc use SSH keys, which takes more steps to set up, thus we will use Open OnDemand for online workshop exercises, feel free to try the SSH and ThinLinc by yourself offline.  
+
+### 2.1 Open OnDemand on Anvil
+
+(1) Go to https://ondemand.anvil.rcac.purdue.edu/ and log in with your ACCESS account.
+(2) Click Clusters -> Anvil Shell ACCESS to open a terminal as below picture show.
+
+<img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" />
+
+### 2.2 ThinLinc Desktop on Anvil
+
+(1) You need set up SSH Key first via Open OnDemand, the detailed steps are here: https://www.rcac.purdue.edu/knowledge/anvil/access/login/sshkeys
+(2) Download the [ThinLinc Client](https://www.cendio.com/thinlinc/download/) and install it to your Laptop.
+(3) Open ThinLinc Client, then go to Options -> Security, and select "Public key" in the "Anthentication method" as here:
+  
+   <img width="514" alt="Screenshot 2025-02-21 at 2 27 31 PM" src="https://github.com/user-attachments/assets/1e3e6a5b-8882-4546-b1e3-de313743ad61" />
+   
+(4) Input Server, Username(replace XX with your train number) and Key(correct it with your path of key) like here:
+   
+   <img width="469" alt="Screenshot 2025-02-21 at 2 27 11 PM" src="https://github.com/user-attachments/assets/7889bdce-6cbd-4cf0-a2eb-a585d83489c4" />
+   
+(5) Hit "Connect".
+
+### 2.3 With SSH on Anvil
+
+Anvil accepts standard SSH connections with public keys-based authentication to anvil.rcac.purdue.edu using your Anvil username:
+
+```localhost$ ssh -l my-x-anvil-username anvil.rcac.purdue.edu```
+
+:::::::::::::::: spoiler
+### Callout
+
+Please note:
+
+Your Anvil username is not the same as your ACCESS username (although it is derived from it). Anvil usernames look like x-ACCESSusername or similar, starting with an x-.
+
+Password-based authentication is not supported on Anvil (in favor of SSH keys). There is no "Anvil password", and your ACCESS password will not be accepted by Anvil's SSH either. SSH keys can be set up from the Open OnDemand interface on Anvil ondemand.anvil.rcac.purdue.edu. Please follow the steps in Setting up SSH keys to add your SSH key on Anvil.
+
+::::::::::::::::::::::::
+
+## 3. Install Tools
+
+### 3.1 Install on HPC Cluster Anvil
+
+Open a Terminal with either way of SSH, Open Ondemand or ThinLinc, and follow the steps below.
 
 (1) Install the tools in your `$PROJECT` directory
 
@@ -109,7 +153,7 @@ copy and paste the url to webpage
 Open a new Terminal
 ```ssh h000 -L 8888:localhost:8888```
 
-### 2.2 Install on HPC Cluster Gautschi
+### 3.2 Install on HPC Cluster Gautschi
 
 (1) Install the tools in your `$SCRATCH` directory (Note: storage in `$SCRATCH` will be purged in 30 days without access; they need to backup to your depot space with `sync` command)
 
