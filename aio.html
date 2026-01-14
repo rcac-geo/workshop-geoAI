@@ -741,7 +741,7 @@ pictures below show.</p></li>
   Callout
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>you could find your Anvil username here if you don’t know it. For the
 example here, my Anvil username is <code>x-xliu26</code>, while my
@@ -784,7 +784,7 @@ authentication to anvil.rcac.purdue.edu using your Anvil username:</p>
   Callout
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Please note:</p>
 <p>Your Anvil username is not the same as your ACCESS username (although
@@ -914,7 +914,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-cases"><p>Content from <a href="cases.html">Case Studies</a></p>
 <hr>
-<p>Last updated on 2026-01-13 |
+<p>Last updated on 2026-01-14 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -952,6 +952,13 @@ Interactive jobs via ThinLinc.</li>
 </div>
 </div>
 </div>
+<ul>
+<li>if you copied the dataset at the <a href="https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets" class="external-link">setup
+session</a> to scratch directory, you need to run
+<code>cd $SCRATCH</code> first to change directory. Otherwise if they
+are at home directory, you are defaulted here and no need for this step
+of action.</li>
+</ul>
 <section><h2 class="section-heading" id="a-case-study-of-a-single-task-model-with-torchgeo">1. A Case study of a single-task model with TorchGeo<a class="anchor" aria-label="anchor" href="#a-case-study-of-a-single-task-model-with-torchgeo"></a>
 </h2>
 <hr class="half-width">
@@ -978,13 +985,11 @@ and then follow the steps below.</p></li>
 <li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
 </ol>
 <ul>
-<li>start jupyter notebook by running</li>
-</ul>
-<p><code>jupyter notebook</code> in the terminal</p>
-<ul>
-<li>Select the kernel you built in last session
+<li><p>start jupyter notebook by running <code>jupyter notebook</code>
+in the terminal</p></li>
+<li><p>Select the kernel you built in last session
 (<code>geo_env_kernel</code> for the give example) from the kernel list,
-after jupyter notebook is up.</li>
+after jupyter notebook is up.</p></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li>run cell by cell in <code>torchgeo_case-cpu.ipynb</code>
