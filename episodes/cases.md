@@ -20,7 +20,11 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-- if you copied the dataset at the [setup session](https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets) to scratch directory, you need to run `cd $SCRATCH` first to change directory. Otherwise if they are at home directory, you are defaulted here and no need for this step of action.
+::::::::::::::::::::::::::::::::::::: callout
+
+Note if you copied the dataset at the [setup session](https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets) to scratch directory, you need to run `cd $SCRATCH` first to change directory. Otherwise if they are at home directory, you are defaulted here and no need for this step of action.
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## 1. A Case study of a single-task model with TorchGeo
 
