@@ -42,11 +42,11 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
 
 (1) Go to https://ondemand.anvil.rcac.purdue.edu/ and log in with your ACCESS account.
 
-(2) Click Clusters -> Anvil Shell ACCESS to open a terminal as below picture show.
+(2) Click Clusters -> Anvil Shell ACCESS to open a terminal as pictures below show.
 
 <img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" />
 
-<img width="750" height="538" alt="image" src="https://github.com/user-attachments/assets/79fd8621-1165-42be-88c4-5d03bfabf7ae" />
+<img width="741" height="769" alt="image" src="https://github.com/user-attachments/assets/771c373d-41af-4083-b89c-deef51712f7a" />
 
 :::::::::::::::: spoiler
 
