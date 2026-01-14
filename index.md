@@ -17,7 +17,7 @@ Welcome to the GeoAI on HPC Workshop, where we'll explore the evolving landscape
 2. **Tools and Setup** We'll dive into the practical tools that enable this work, and set up working environment on HPC Clusters. We'll examine the TorchGeo library, which provides a comprehensive toolkit for training models on geospatial datasets within PyTorch. We'll also cover TerraTorch, a fine-tuning and benchmarking toolkit that extends capabilities for Geospatial Foundation Models.  
 
 
-3. **Case Studies** We'll go through several case studies to understand the transition from traditional, single-task GeoAI models—like a model trained to identify specific land cover types—to the latest advancements in Geoscience Foundation Models. These larger, more versatile models are capable of performing perform specific geoscience tasks with much less new data than would be required for a traditional model.
+3. **Case Studies** We'll go through several case studies to understand the transition from traditional, single-task GeoAI models—like a model trained to identify specific land cover types—to the latest advancements in Geoscience Foundation Models. These larger, more versatile models are capable of performing perform specific geoscience tasks with much less new data than would be required for a traditional model. We will also introduce three ways to perform these tasks with HPC, and mainly focus on two of them with online experiments: interactive job via OoD and batch job.
   * A Case study of a single-task model with TorchGeo
   * A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
   * A Case study of GFMs: Aurora
