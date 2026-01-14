@@ -650,7 +650,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-tools"><p>Content from <a href="tools.html">Install Tools for GeoAI on HPC</a></p>
 <hr>
-<p>Last updated on 2026-01-13 |
+<p>Last updated on 2026-01-14 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -737,7 +737,23 @@ your ACCESS account.</p></li>
 <li><p>Click Clusters -&gt; Anvil Shell ACCESS to open a terminal as
 below picture show.</p></li>
 </ol>
-<figure><img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" class="figure mx-auto d-block"></figure>
+<figure><img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" class="figure mx-auto d-block"></figure><figure><img width="750" height="538" alt="image" src="https://github.com/user-attachments/assets/79fd8621-1165-42be-88c4-5d03bfabf7ae" class="figure mx-auto d-block"></figure><div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Callout
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>you could find your Anvil username here if you don’t know it. For the
+example here, my Anvil username is <code>x-xliu26</code>, while my
+ACCESS username is <code>xliu26</code>.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="thinlinc-desktop-on-anvil">2.2 ThinLinc Desktop on Anvil<a class="anchor" aria-label="anchor" href="#thinlinc-desktop-on-anvil"></a>
@@ -751,8 +767,8 @@ install it to your Laptop.</p></li>
 select “Public key” in the “Anthentication method” as here:</p></li>
 </ol>
 <figure><img width="514" alt="Screenshot 2025-02-21 at 2 27 31 PM" src="https://github.com/user-attachments/assets/1e3e6a5b-8882-4546-b1e3-de313743ad61" class="figure mx-auto d-block"></figure><ol start="4" style="list-style-type: decimal">
-<li>Input Server, Username(replace XX with your train number) and
-Key(correct it with your path of key) like here:</li>
+<li>Input Server, Anvil Username and Key(correct it with your path of
+key) like here:</li>
 </ol>
 <figure><img width="474" height="289" alt="image" src="https://github.com/user-attachments/assets/19be22fc-b29c-4cb0-8ee9-90d09a611879" class="figure mx-auto d-block"></figure><ol start="5" style="list-style-type: decimal">
 <li>Hit “Connect”.</li>
@@ -764,15 +780,15 @@ Key(correct it with your path of key) like here:</li>
 <p>Anvil accepts standard SSH connections with public keys-based
 authentication to anvil.rcac.purdue.edu using your Anvil username:</p>
 <p><code>localhost$ ssh -l my-x-anvil-username anvil.rcac.purdue.edu</code></p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Callout
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>Please note:</p>
 <p>Your Anvil username is not the same as your ACCESS username (although
@@ -781,9 +797,9 @@ similar, starting with an x-.</p>
 <p>Password-based authentication is not supported on Anvil (in favor of
 SSH keys). There is no “Anvil password”, and your ACCESS password will
 not be accepted by Anvil’s SSH either. SSH keys can be set up from the
-Open OnDemand interface on Anvil ondemand.anvil.rcac.purdue.edu. Please
-follow the steps in Setting up SSH keys to add your SSH key on
-Anvil.</p>
+<a href="../ondemand.anvil.rcac.purdue.edu">Open OnDemand interface</a> on
+Anvil. Please follow <a href="https://www.rcac.purdue.edu/knowledge/anvil/access/login/sshkeys" class="external-link">the
+steps in Setting up SSH keys</a> to add your SSH key on Anvil.</p>
 </div>
 </div>
 </div>
