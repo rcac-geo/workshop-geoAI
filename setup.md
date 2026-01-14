@@ -15,3 +15,17 @@ title: Setup
 | 3:00 PM | Cases Studies |
 | 4:30 PM | Wrap-Up & Discussion |
 
+## Data Sets
+
+Total size of the data set is ~500 MB. If you have enough space in your home directory(use `myquota` to check), you could copy them there. Otherwise, just copy it to scratch directory (note files here will be purge after 60 days of inactivity).
+
+Copy data to your scratch directory:
+
+```sh
+rsync -avP /anvil/projects/x-tra250034/data/geoAI $SCRATCH
+```
+Or copy data to your home directory:
+
+```sh
+rsync -avP /anvil/projects/x-tra250034/data/geoAI $HOME
+```
