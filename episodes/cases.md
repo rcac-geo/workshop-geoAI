@@ -20,6 +20,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+- if you copied the dataset at the [setup session](https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets) to scratch directory, you need to run `cd $SCRATCH` first to change directory. Otherwise if they are at home directory, you are defaulted here and no need for this step of action.
+
 ## 1. A Case study of a single-task model with TorchGeo
 
 ### 1.1 Interactive Job on the remote desktop with Open OnDemand 
@@ -41,9 +43,7 @@ module load jupyter
 
 (2) Open jupyter notebook and Use the Centralized Aurora Kernel
 
-- start jupyter notebook by running
-  
-```jupyter notebook``` in the terminal
+- start jupyter notebook by running `jupyter notebook` in the terminal
 
 - Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
