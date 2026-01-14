@@ -393,10 +393,28 @@ hydrologic modeling.</p>
 <td>Cases Studies</td>
 </tr><tr class="even"><td align="left">4:30 PM</td>
 <td>Wrap-Up &amp; Discussion</td>
-</tr></tbody></table><!--
+</tr></tbody></table></section><section><h2 class="section-heading" id="data-sets">Data Sets<a class="anchor" aria-label="anchor" href="#data-sets"></a></h2>
+<hr class="half-width"><p>Total size of the data set is ~500 MB. If you have enough space in
+your home directory(use <code>myquota</code> to check), you could copy
+them there. Otherwise, just copy it to scratch directory (note files
+here will be purge after 60 days of inactivity).</p>
+<p>Copy data to your scratch directory:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avP</span> /anvil/projects/x-tra250034/data/geoAI <span class="va">$SCRATCH</span></span></code></pre>
+</div>
+<p>Or copy data to your home directory:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-avP</span> /anvil/projects/x-tra250034/data/geoAI <span class="va">$HOME</span></span></code></pre>
+</div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+ -->
+</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
