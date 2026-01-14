@@ -46,6 +46,16 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
 
 <img width="750" height="140" alt="image" src="https://github.com/user-attachments/assets/b3e0e20c-ce62-49a0-b7b4-8d53466754f8" />
 
+<img width="750" height="538" alt="image" src="https://github.com/user-attachments/assets/79fd8621-1165-42be-88c4-5d03bfabf7ae" />
+
+:::::::::::::::: spoiler
+
+### Callout
+
+you could find your Anvil username here if you don't know it. For the example here, my Anvil username is `x-xliu26`, while my ACCESS username is `xliu26`.
+
+::::::::::::::::::::::::
+
 ### 2.2 ThinLinc Desktop on Anvil
 
 (1) You need set up SSH Key first via Open OnDemand, the detailed steps are here: https://www.rcac.purdue.edu/knowledge/anvil/access/login/sshkeys
@@ -56,7 +66,7 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
   
    <img width="514" alt="Screenshot 2025-02-21 at 2 27 31 PM" src="https://github.com/user-attachments/assets/1e3e6a5b-8882-4546-b1e3-de313743ad61" />
    
-(4) Input Server, Username(replace XX with your train number) and Key(correct it with your path of key) like here:
+(4) Input Server, Anvil Username and Key(correct it with your path of key) like here:
    
   <img width="474" height="289" alt="image" src="https://github.com/user-attachments/assets/19be22fc-b29c-4cb0-8ee9-90d09a611879" />
 
@@ -76,7 +86,7 @@ Please note:
 
 Your Anvil username is not the same as your ACCESS username (although it is derived from it). Anvil usernames look like x-ACCESSusername or similar, starting with an x-.
 
-Password-based authentication is not supported on Anvil (in favor of SSH keys). There is no "Anvil password", and your ACCESS password will not be accepted by Anvil's SSH either. SSH keys can be set up from the Open OnDemand interface on Anvil ondemand.anvil.rcac.purdue.edu. Please follow the steps in Setting up SSH keys to add your SSH key on Anvil.
+Password-based authentication is not supported on Anvil (in favor of SSH keys). There is no "Anvil password", and your ACCESS password will not be accepted by Anvil's SSH either. SSH keys can be set up from the [Open OnDemand interface](ondemand.anvil.rcac.purdue.edu) on Anvil. Please follow [the steps in Setting up SSH keys](https://www.rcac.purdue.edu/knowledge/anvil/access/login/sshkeys) to add your SSH key on Anvil.
 
 ::::::::::::::::::::::::
 
