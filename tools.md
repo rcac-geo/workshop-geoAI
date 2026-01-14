@@ -50,7 +50,7 @@ Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/acc
 
 :::::::::::::::: spoiler
 
-### Callout
+### Note
 
 you could find your Anvil username here if you don't know it. For the example here, my Anvil username is `x-xliu26`, while my ACCESS username is `xliu26`.
 
@@ -80,9 +80,7 @@ Anvil accepts standard SSH connections with public keys-based authentication to 
 ```localhost$ ssh -l my-x-anvil-username anvil.rcac.purdue.edu```
 
 :::::::::::::::: spoiler
-### Callout
-
-Please note:
+### Note
 
 Your Anvil username is not the same as your ACCESS username (although it is derived from it). Anvil usernames look like x-ACCESSusername or similar, starting with an x-.
 
