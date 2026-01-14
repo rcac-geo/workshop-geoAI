@@ -15,10 +15,3 @@ title: Setup
 | 3:00 PM | Cases Studies |
 | 4:30 PM | Wrap-Up & Discussion |
 
-## Software Setup
-
-:::::::::::::::: spoiler
-
-Download the [ThinLinc Client](https://www.cendio.com/thinlinc/download/) and install it to your Laptop.
-
-::::::::::::::::::::::::
