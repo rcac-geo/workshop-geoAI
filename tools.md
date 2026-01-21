@@ -99,11 +99,13 @@ Open a Terminal with either way of SSH, Open Ondemand or ThinLinc, and follow th
 
 ```cd $SCRATCH```  
 
-::::::::::::::::::::::::::::::::::::: note
+:::::::::::::::: spoiler
 
-For this workshop, you install the tools in `$SCRATCH` for demo case. But for real case use, you should install it into the app subdirectory of your project directory, since storage in `$SCRATCH` will be purged in 30 days without access.
+### Note
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+On this workshop, you will install the tools in `$SCRATCH` for practicing. But for real case use, you should install it into the app subdirectory of your project directory, since storage in `$SCRATCH` will be purged in 30 days without access.
+
+::::::::::::::::::::::::
 
 
 (2) Load necessary modules, including `conda` and `cuda`
@@ -150,31 +152,17 @@ torchgeo                  0.7.0                    pypi_0    pypi
 Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geoai_env_kernel
 
 
-Now Open thinLinc Desktop and open a Terminal
-```sinteractive -A nairrtest-ai -p ai -N1 -n7 --gpus-per-node=1 -t 1:00:00```
-
-```
-salloc: Pending job allocation 13972179
-salloc: job 13972179 queued and waiting for resources
-salloc: job 13972179 has been allocated resources
-salloc: Granted job allocation 13972179
-salloc: Waiting for resource configuration
-salloc: Nodes g006 are ready for job
-
-x-xliu26@h001.anvil:[~] $ 
-```
-
-```module load jupyter```
-```jupyter notebook```
-copy and paste the url to webpage
-
-Open a new Terminal
-```ssh h000 -L 8888:localhost:8888```
-
 ### 3.2 Install on HPC Cluster Gautschi
 
-(1) Install the tools in your `$SCRATCH` directory (Note: storage in `$SCRATCH` will be purged in 30 days without access; they need to backup to your depot space with `sync` command)
+(1) Install the tools in your `$SCRATCH` directory.
 
+:::::::::::::::: spoiler
+
+### Note
+
+Storage in `$SCRATCH` will be purged in 30 days without access; they need to backup to your depot space with `sync` command. Each faculty at Purdue can get free 100 GB for their group to use with submitting an order [here](https://www.rcac.purdue.edu/orders/products?category=3).
+
+::::::::::::::::::::::::
 
 ```cd $SCRATCH```
 
@@ -218,23 +206,6 @@ torchgeo                  0.7.0                    pypi_0    pypi
 ```ipython kernel install --user --name=geoai_env_kernel```
 
 ```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
-
-
-
-Now Open thinLinc Desktop and open a Terminal
-```sinteractive -A rcac -p ai -N1 -n14 --gpus-per-node=1 -t 5:00:00```
-
-```
-salloc: Granted job allocation 1119021
-salloc: Waiting for resource configuration
-salloc: Nodes h000 are ready for job
-
-liu4201@h000.gautschi:[~] $
-```
-
-```module load jupyter```
-```jupyter notebook```
-copy and paste the url to webpage
 
 Open a new Terminal
 ```ssh h000 -L 8888:localhost:8888```
