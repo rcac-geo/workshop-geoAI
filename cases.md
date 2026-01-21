@@ -91,7 +91,7 @@ salloc: Nodes a600 are ready for job
   
 ```jupyter notebook``` in the terminal
 
-- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+- Select the kernel you built in last session (`geoai_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
 
 (4) run cell by cell in `torchgeo_case-cpu.ipynb`
@@ -137,13 +137,18 @@ module load geoai/multi-temporal-crop-classification
 module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
-conda activate $RCAC_PROJECT/$(whoami)/app/conda_env/geo_env
-cd $RCAC_PROJECT/$(whoami)/data/workshop/geoAI
+conda activate $SCRATCH/conda_env/geoai_env
+cd ./geoAI  # check the callout note below
 
 python train.py
 ```
 - You will use the `train.py` provided in the workshop, where I have already set the EPOCHS as 10 for shorter time ((~15 mins) need. Feel free to reduce it to save more time for this workshop, or increase it to see better performance later.
 
+::::::::::::::::::::::::::::::::::::: callout
+
+Note if you copied the dataset at the [setup session](https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets) to scratch directory, you need to run `cd $SCRATCH/geoAI` to change directory intead of `cd ~/geoAI`. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 (2) Submit job and check status & output
 
@@ -180,7 +185,7 @@ module load jupyter
   
 ```jupyter notebook``` in the terminal
 
-- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+- Select the kernel you built in last session (`geoai_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
 
 (3) run cell by cell in `terratorch_gfms_case.ipynb` 
@@ -255,7 +260,7 @@ salloc: Nodes g007 are ready for job
   
 ```jupyter notebook``` in the terminal
 
-- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+- Select the kernel you built in last session (`geoai_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
 
 
 (4) run cell by cell in `terratorch_gfms_case.ipynb` 
