@@ -302,7 +302,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Case Studies</h1>
-        <p>Last updated on 2026-01-14 |
+        <p>Last updated on 2026-01-21 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -413,8 +413,8 @@ salloc: Nodes a600 are ready for job</code></pre>
 </ol><ul><li>start jupyter notebook by running</li>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
 <ul><li>Select the kernel you built in last session
-(<code>geo_env_kernel</code> for the give example) from the kernel list,
-after jupyter notebook is up.</li>
+(<code>geoai_env_kernel</code> for the give example) from the kernel
+list, after jupyter notebook is up.</li>
 </ul><ol start="4" style="list-style-type: decimal"><li>run cell by cell in <code>torchgeo_case-cpu.ipynb</code>
 </li>
 </ol><div id="callout3" class="callout">
@@ -463,15 +463,29 @@ module load geoai/multi-temporal-crop-classification
 module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
-conda activate $RCAC_PROJECT/$(whoami)/app/conda_env/geo_env
-cd $RCAC_PROJECT/$(whoami)/data/workshop/geoAI
+conda activate $SCRATCH/conda_env/geoai_env
+cd ./geoAI  # check the callout note below
 
 python train.py</code></pre>
 <ul><li>You will use the <code>train.py</code> provided in the workshop,
 where I have already set the EPOCHS as 10 for shorter time ((~15 mins)
 need. Feel free to reduce it to save more time for this workshop, or
 increase it to see better performance later.</li>
-</ul><ol start="2" style="list-style-type: decimal"><li>Submit job and check status &amp; output</li>
+</ul><div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Note if you copied the dataset at the <a href="https://rcac-geo.github.io/workshop-geoAI/index.html#data-sets" class="external-link">setup
+session</a> to scratch directory, you need to run
+<code>cd $SCRATCH/geoAI</code> to change directory intead of
+<code>cd ~/geoAI</code>.</p>
+</div>
+</div>
+</div>
+<ol start="2" style="list-style-type: decimal"><li>Submit job and check status &amp; output</li>
 </ol><ul><li>submit the job by running <code>sbatch train.gpujob</code> in the
 terminal</li>
 <li>run <code>squeue --me</code> in the terminal to check the job
@@ -506,8 +520,8 @@ session</li>
 </ol><ul><li>start jupyter notebook by running</li>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
 <ul><li>Select the kernel you built in last session
-(<code>geo_env_kernel</code> for the give example) from the kernel list,
-after jupyter notebook is up.</li>
+(<code>geoai_env_kernel</code> for the give example) from the kernel
+list, after jupyter notebook is up.</li>
 </ul><ol start="3" style="list-style-type: decimal"><li>run cell by cell in <code>terratorch_gfms_case.ipynb</code>
 </li>
 </ol><p>It will take ~15 mins to train 10 epochs. You could reduce
@@ -570,8 +584,8 @@ session</li>
 </ol><ul><li>start jupyter notebook by running</li>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
 <ul><li>Select the kernel you built in last session
-(<code>geo_env_kernel</code> for the give example) from the kernel list,
-after jupyter notebook is up.</li>
+(<code>geoai_env_kernel</code> for the give example) from the kernel
+list, after jupyter notebook is up.</li>
 </ul><ol start="4" style="list-style-type: decimal"><li>run cell by cell in <code>terratorch_gfms_case.ipynb</code>
 </li>
 </ol><p>It will take ~15 mins to train 10 epochs. You could reduce
@@ -633,7 +647,7 @@ module load Aurora</code></pre>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
 <ul><li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
 notebook is up.</li>
-</ul><div id="callout4" class="callout">
+</ul><div id="callout5" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -665,7 +679,7 @@ module load Aurora</code></pre>
 </ul><p><code>jupyter notebook</code> in the terminal</p>
 <ul><li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
 notebook is up.</li>
-</ul><div id="callout5" class="callout">
+</ul><div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -700,7 +714,7 @@ the first session do these three cases belong to?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
@@ -773,7 +787,7 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/cases.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/cases.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2026-01-14",
+  "dateModified": "2026-01-21",
   "datePublished": "2026-01-21"
 }
 
