@@ -142,7 +142,7 @@ cd ./geoAI  # check the callout note below
 
 python train.py
 ```
-- You will use the `train.py` provided in the workshop, where I have already set the EPOCHS as 10 for shorter time ((~15 mins) need. Feel free to reduce it to save more time for this workshop, or increase it to see better performance later.
+- You will use the `train.py` provided in the workshop, where I have already set the EPOCHS as 10 for shorter time (~15 mins) need. Feel free to reduce it to save more time for this workshop, or increase it to see better performance later.
 
 ::::::::::::::::::::::::::::::::::::: callout
 
