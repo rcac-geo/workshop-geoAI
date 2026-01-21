@@ -94,10 +94,16 @@ Password-based authentication is not supported on Anvil (in favor of SSH keys). 
 
 Open a Terminal with either way of SSH, Open Ondemand or ThinLinc, and follow the steps below.
 
-(1) Install the tools in your `$PROJECT` directory
+(1) Install the tools in your `$SCRATCH` directory
 
 
-```cd $PROJECT```  
+```cd $SCRATCH```  
+
+::::::::::::::::::::::::::::::::::::: note
+
+For this workshop, you install the tools in `$SCRATCH` for demo case. But for real case use, you should install it into the app subdirectory of your project directory, since storage in `$SCRATCH` will be purged in 30 days without access.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 (2) Load necessary modules, including `conda` and `cuda`
@@ -108,11 +114,11 @@ Open a Terminal with either way of SSH, Open Ondemand or ThinLinc, and follow th
 
 (3) Create and activate the conda environment 
 
-```conda create -p ./app/conda_env/geo_env python=3.12```
+```conda create -p ./conda_env/geoai_env python=3.12```
 
-```conda activate ./geo_env```
+```conda activate ./conda_env/geoai_env```
 
-```(/anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env) x-xliu26@login05.anvil:```
+```(/anvil/scratch/x-xliu26/conda_env/geoai_env) x-xliu26@login05.anvil:```
 
 (4) Install tools
 
@@ -121,7 +127,7 @@ Open a Terminal with either way of SSH, Open Ondemand or ThinLinc, and follow th
 ```conda list terratorch```
 
 ```
-# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+# packages in environment at /anvil/scratch/x-xliu26/conda_env/geoai_env:
 #
 # Name                    Version                   Build  Channel
 terratorch                1.1                    pypi_0    pypi
@@ -129,7 +135,7 @@ terratorch                1.1                    pypi_0    pypi
 `terratorch` automatically include `torchgeo`: ```conda list torchgeo```
 
 ```
-# packages in environment at /anvil/projects/x-asc170016/x-xliu26/app/conda_env/geo_env:
+# packages in environment at /anvil/scratch/x-xliu26/conda_env/geoai_env:
 #
 # Name                    Version                   Build  Channel
 torchgeo                  0.7.0                    pypi_0    pypi 
@@ -139,9 +145,9 @@ torchgeo                  0.7.0                    pypi_0    pypi
 
 ```conda install ipykernel```
 
-```ipython kernel install --user --name=geo_env_kernel```
+```ipython kernel install --user --name=geoai_env_kernel```
 
-Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geo_env_kernel
+Installed kernelspec geo_env_kernel in /home/x-xliu26/.local/share/jupyter/kernels/geoai_env_kernel
 
 
 Now Open thinLinc Desktop and open a Terminal
@@ -180,26 +186,26 @@ Open a new Terminal
 
 (3) Create and activate the conda environment 
 
-```conda create -p ./geo_env python=3.12```
+```conda create -p ./geoai_env python=3.12```
 
 
-```conda activate ./geo_env```
+```conda activate ./geoai_env```
 
 
-```(/scratch/gautschi/liu4201/geo_env) liu4201@login03.gautschi:```
+```(/scratch/gautschi/liu4201/geoai_env) liu4201@login03.gautschi:```
 
 (4) Install tools
 
 ```pip install terratorch```
 
-```# packages in environment at /scratch/gautschi/liu4201/geo_env:
+```# packages in environment at /scratch/gautschi/liu4201/geoai_env:
 #
 # Name                    Version                   Build  Channel
 terratorch                1.1                     pypi_0    pypi
 ```
 `terratorch` automatically include `torchgeo`: ```conda list torchgeo```
 
-```# packages in environment at /scratch/gautschi/liu4201/geo_env:
+```# packages in environment at /scratch/gautschi/liu4201/geoai_env:
 #
 # Name                    Version                   Build  Channel
 torchgeo                  0.7.0                    pypi_0    pypi 
@@ -209,7 +215,7 @@ torchgeo                  0.7.0                    pypi_0    pypi
 
 ```conda install ipykernel```
 
-```ipython kernel install --user --name=geo_env_kernel```
+```ipython kernel install --user --name=geoai_env_kernel```
 
 ```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
 
