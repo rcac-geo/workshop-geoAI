@@ -209,7 +209,5 @@ torchgeo                  0.7.0                    pypi_0    pypi
 
 ```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
 
-Open a new Terminal
-```ssh h000 -L 8888:localhost:8888```
 
 
