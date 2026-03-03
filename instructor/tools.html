@@ -302,7 +302,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Install Tools for GeoAI on HPC</h1>
-        <p>Last updated on 2026-01-21 |
+        <p>Last updated on 2026-03-03 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/tools.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -324,7 +324,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What tools do you need for your geoAI tasks?</li>
-<li>How to do install the tools for HPC?</li>
+<li>How to install the tools for HPC?</li>
 </ul></div>
 </div>
 </div>
@@ -365,7 +365,7 @@ models for specific tasks. </li>
 </section><section><h2 class="section-heading" id="logging-in-to-hpc-clusters">2. Logging In to HPC Clusters<a class="anchor" aria-label="anchor" href="#logging-in-to-hpc-clusters"></a></h2>
 <hr class="half-width"><p>Once your account(<a href="https://www.rcac.purdue.edu/knowledge/anvil/access/obtaining_an_account" class="external-link">Access
 Anvil</a>) is ready on regular RCAC HPC clusters, there are three ways
-for lgging in: the SSH (Secure Shell), ThinLinc, and Open OnDemand. The
+for logging in: the SSH (Secure Shell), ThinLinc, and Open OnDemand. The
 SSH and ThinLinc use SSH keys, which takes more steps to set up, thus we
 will use Open OnDemand for online workshop exercises, feel free to try
 the SSH and ThinLinc by yourself offline.</p>
@@ -468,7 +468,7 @@ app subdirectory of your project directory, since storage in
 <p><code>conda activate ./conda_env/geoai_env</code></p>
 <p><code>(/anvil/scratch/x-xliu26/conda_env/geoai_env) x-xliu26@login05.anvil:</code></p>
 <ol start="4" style="list-style-type: decimal"><li>Install tools</li>
-</ol><p><code>pip install terratorch</code></p>
+</ol><p><code>pip install terratorch==1.1</code></p>
 <p><code>conda list terratorch</code></p>
 <pre><code># packages in environment at /anvil/scratch/x-xliu26/conda_env/geoai_env:
 #
@@ -518,10 +518,16 @@ use with submitting an order <a href="https://www.rcac.purdue.edu/orders/product
 <p><code>(/scratch/gautschi/liu4201/geoai_env) liu4201@login03.gautschi:</code></p>
 <ol start="4" style="list-style-type: decimal"><li>Install tools</li>
 </ol><p><code>pip install terratorch</code></p>
-<p><code># packages in environment at /scratch/gautschi/liu4201/geoai_env: # # Name                    Version                   Build  Channel terratorch                1.1                     pypi_0    pypi</code>
-<code>terratorch</code> automatically include <code>torchgeo</code>:
+<pre><code># packages in environment at /scratch/gautschi/liu4201/geoai_env:
+#
+# Name                    Version                   Build  Channel
+terratorch                1.1                     pypi_0    pypi</code></pre>
+<p><code>terratorch</code> automatically include <code>torchgeo</code>:
 <code>conda list torchgeo</code></p>
-<p><code># packages in environment at /scratch/gautschi/liu4201/geoai_env: # # Name                    Version                   Build  Channel torchgeo                  0.7.0                    pypi_0    pypi</code></p>
+<pre><code># packages in environment at /scratch/gautschi/liu4201/geoai_env:
+#
+# Name                    Version                   Build  Channel
+torchgeo                  0.7.0                    pypi_0    pypi </code></pre>
 <ol start="5" style="list-style-type: decimal"><li>Build a kernel for jupyter notebook</li>
 </ol><p><code>conda install ipykernel</code></p>
 <p><code>ipython kernel install --user --name=geoai_env_kernel</code></p>
@@ -592,7 +598,7 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/instructor/tools.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/instructor/tools.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2026-01-21",
+  "dateModified": "2026-03-03",
   "datePublished": "2026-03-03"
 }
 
