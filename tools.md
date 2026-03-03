@@ -207,7 +207,13 @@ torchgeo                  0.7.0                    pypi_0    pypi
 
 ```ipython kernel install --user --name=geoai_env_kernel```
 
-```Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel```
+Installed kernelspec geo_env_kernel in /home/liu4201/.local/share/jupyter/kernels/geo_env_kernel
 
+::::::::::::::::::::::::::::::::::::: keypoints 
 
+- TorchGeo is a PyTorch library specifically designed for geospatial data.
+- Built on top of PyTorch Lightning and TorchGeo, TerraTorch is a fine-tuning and benchmarking toolkit for Geospatial Foundation Models.
+- We can install TerraTorch with conda in a virtual environment
+- Once your account is ready, there are three ways for logging in to Anvil and other RCAC HPC clusters: the SSH (Secure Shell), ThinLinc, and Open OnDemand.
 
+::::::::::::::::::::::::::::::::::::::::::::::::
