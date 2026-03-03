@@ -464,6 +464,7 @@ It will take ~5 min to finishi the inference on a whole cpu node. It will be ver
 (1) Load modules and Start interactive job as below:
 
 ```
+module load modtree/gpu cuda/12.0.1 conda
 module load jupyter
 module load gfms
 module load Aurora
@@ -493,6 +494,7 @@ With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal
 (1) Load modules and Start interactive job as below:
 
 ```
+module load modtree/gpu cuda/12.0.1 conda
 module load jupyter
 module load gfms
 module load Aurora
@@ -529,5 +531,12 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 3: Regression Problem-Time Series Forecasting  
 
 :::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- There are three ways to perform GeoAI tasks on HPC: Batch jobs, Interactive jobs via Open OnDemand, and Interactive jobs via ThinLinc.
+- You could use "module load" command to load a variety of pre-staged geoAI datasets, and Geoscience Foundation Models (GFMs) on Anvil.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
