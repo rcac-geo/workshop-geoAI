@@ -150,3 +150,13 @@ exercises: 0
 - Check more information on: https://www.rcac.purdue.edu/knowledge/gfms
 - Contact rcac-help@purdue.edu if there is a popular GFMs you want to use and is not currently available on HPC Clusters
 - We will cover two case studies of [Aurora](https://rcac-geo.github.io/workshop-geoAI/cases.html#a-case-study-of-gfms-aurora) and [Prithvi-EO-2.0](https://rcac-geo.github.io/workshop-geoAI/cases.html#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0) in the 3rd Session: [Case Studies](https://rcac-geo.github.io/workshop-geoAI/cases.html#) today!
+
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Geospatial Artificial Intelligence (GeoAI) gives AI a "sense of place" by utilizing Coordinate Reference Systems (CRS) to map individual image pixels to precise real-world locations.
+- GeoAI extends beyond classic AI classification and regression to extract patterns, classify land features, and predict spatiotemporal phenomena across the physical world.
+- Geoscience Foundation Models (GFMs) are large-scale neural networks pre-trained on vast, diverse Earth science datasets; they can be fine-tuned or adapted to specific tasks using significantly less data than traditional models require.
+- High-Performance Computing (HPC) clusters outperform local laptops and lab servers for GeoAI by providing massive storage, high-density GPU acceleration, and centralized access to pre-staged Earth science datasets and Geoscience Foundation Models (GFMs).
+
+::::::::::::::::::::::::::::::::::::::::::::::::
