@@ -116,8 +116,8 @@ exercises: 0
     - https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M
     - We will demo a crop classification task with Prithvi-EO-2.0 on Anvil
 - Training on Anvil for 50 epochs
-    - Jupyter notebook—only one GPU can be used: 4101.991409 seconds: 1.13 hours
-    - Sbatch job-when use two GPUs: 2366.664293 seconds: 39.4 mins
+    - Jupyter notebook—only one GPU can be used: 4101.991409 seconds (1.13 hours)
+    - Sbatch job-when use two GPUs: 2366.664293 seconds (39.4 mins)
 - Training on my Mac Max for 1 epoch
     - Jupyter notebook: 38 days 13 hours 44 mins
 
