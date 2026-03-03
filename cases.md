@@ -28,7 +28,9 @@ Note if you copied the dataset at the [setup session](https://rcac-geo.github.io
 
 ## 1. A Case study of a single-task model with TorchGeo
 
-### 1.1 Interactive Job on the remote desktop with Open OnDemand 
+### 1.1 Use CPU
+
+#### 1.1.1 Interactive Job on the remote desktop with Open OnDemand 
 
 - With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
 <img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
@@ -61,7 +63,7 @@ Note if GPU is not available, the code is implemented to have just make 1 pass a
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-### 1.2 Interactive Job on the remote desktop with ThinLinc 
+### 1.1.2 Interactive Job on the remote desktop with ThinLinc 
 
 With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
 
@@ -101,6 +103,73 @@ salloc: Nodes a600 are ready for job
 Note if GPU is not available, the code is implemented to have just make 1 pass and limit the size of the datasets. You could see the figures of more training with GPU in `torchgeo_case.ipynb`, which has better performance. 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+### 1.2 Use GPU
+
+#### 1.2.1 Interactive Job on the remote desktop with Open OnDemand 
+
+- With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+<img width="714" height="401" alt="image" src="" />
+
+- The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
+  <img width="940" height="272" alt="image" src="" />
+  
+- click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
+
+
+(1) Load modules:
+
+```
+module load modtree/gpu cuda/12.0.1
+module load jupyter
+```
+
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running `jupyter notebook` in the terminal
+
+- Select the kernel you built in last session (`geo_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(3) run cell by cell in `torchgeo_case.ipynb`
+
+
+### 1.2.2 Interactive Job on the remote desktop with ThinLinc 
+
+With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
+
+(1) Load modules:
+
+```
+module load modtree/gpu cuda/12.0.1
+module load jupyter
+```
+
+(2) Start interactive job 
+
+```
+sinteractive -A tra250034-gpu -N1 -c32 -p gpu --gpus-per-node=1 -t 30:00
+```
+```
+salloc: Pending job allocation 14771023
+salloc: job 14771023 queued and waiting for resources
+salloc: job 14771023 has been allocated resources
+salloc: Granted job allocation 14771023
+salloc: Waiting for resource configuration
+salloc: Nodes a600 are ready for job
+```
+
+(3) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select the kernel you built in last session (`geoai_env_kernel` for the give example) from the kernel list, after jupyter notebook is up.
+
+
+(4) run cell by cell in `torchgeo_case.ipynb`
+
 
 ## 2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0
 
@@ -307,7 +376,9 @@ module load gfms
 module load Aurora
 ```
 
-### 3.2 Interactive Job on the remote desktop with Open OnDemand 
+### 3.2 Use CPU
+
+#### 3.2.1 Interactive Job on the remote desktop with Open OnDemand 
 
 - With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
 <img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" />
@@ -344,7 +415,7 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
 
 
-### 3.3 Interactive Job on the remote desktop with ThinLinc 
+#### 3.2.2 Interactive Job on the remote desktop with ThinLinc 
 
 With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
 
@@ -378,6 +449,73 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
 
 
+### 3.3 Use GPU
+
+#### 3.3.1 Interactive Job on the remote desktop with Open OnDemand 
+
+- With [Open OnDemand](https://ondemand.anvil.rcac.purdue.edu/), click "Desktop" under "Interactive Apps". Input the allocation, Queue, and Wall Time and Cores as the picture below and hit Launch.
+<img width="714" height="401" alt="image" src="" />
+
+- The Desktop Session will be queued, and you could click Launch Desktop once it's ready like the picture below. 
+  <img width="940" height="272" alt="image" src="" />
+  
+- click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below.
+  
+(1) Load modules and Start interactive job as below:
+
+```
+module load jupyter
+module load gfms
+module load Aurora
+```
+
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select `gfms_aurora` from the kernel list, after jupyter notebook is up.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` kernel to be found. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+(3) run cell by cell in `gfm_aurora-gpu.ipynb`
+
+
+#### 3.3.2 Interactive Job on the remote desktop with ThinLinc 
+
+With ThinLinc, click "Terminal Emulator" under "Applications" to open a Terminal and then follow the steps below. 
+
+(1) Load modules and Start interactive job as below:
+
+```
+module load jupyter
+module load gfms
+module load Aurora
+```
+```
+sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00
+```
+
+(2) Open jupyter notebook and Use the Centralized Aurora Kernel
+
+- start jupyter notebook by running
+  
+```jupyter notebook``` in the terminal
+
+- Select `gfms_aurora` from the kernel list, after jupyter notebook is up.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` kernel to be found. 
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+(3) run cell by cell in `gfm_aurora.ipynb`
 
 
 ::::::::::::::::::::::::::::::::::::: challenge 
