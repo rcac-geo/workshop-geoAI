@@ -7,7 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What tools do you need for your geoAI tasks?
-- How to do install the tools for HPC?
+- How to install the tools for HPC?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -36,7 +36,7 @@ exercises: 2
 
 ## 2. Logging In to HPC Clusters
 
-Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/access/obtaining_an_account)) is ready on regular RCAC HPC clusters, there are three ways for lgging in: the SSH (Secure Shell), ThinLinc, and Open OnDemand. The SSH and ThinLinc use SSH keys, which takes more steps to set up, thus we will use Open OnDemand for online workshop exercises, feel free to try the SSH and ThinLinc by yourself offline.  
+Once your account([Access Anvil](https://www.rcac.purdue.edu/knowledge/anvil/access/obtaining_an_account)) is ready on regular RCAC HPC clusters, there are three ways for logging in: the SSH (Secure Shell), ThinLinc, and Open OnDemand. The SSH and ThinLinc use SSH keys, which takes more steps to set up, thus we will use Open OnDemand for online workshop exercises, feel free to try the SSH and ThinLinc by yourself offline.  
 
 ### 2.1 Open OnDemand on Anvil
 
@@ -124,7 +124,7 @@ On this workshop, you will install the tools in `$SCRATCH` for practicing. But f
 
 (4) Install tools
 
-```pip install terratorch```
+```pip install terratorch==1.1```
 
 ```conda list terratorch```
 
@@ -186,14 +186,16 @@ Storage in `$SCRATCH` will be purged in 30 days without access; they need to bac
 
 ```pip install terratorch```
 
-```# packages in environment at /scratch/gautschi/liu4201/geoai_env:
+```
+# packages in environment at /scratch/gautschi/liu4201/geoai_env:
 #
 # Name                    Version                   Build  Channel
 terratorch                1.1                     pypi_0    pypi
 ```
 `terratorch` automatically include `torchgeo`: ```conda list torchgeo```
 
-```# packages in environment at /scratch/gautschi/liu4201/geoai_env:
+```
+# packages in environment at /scratch/gautschi/liu4201/geoai_env:
 #
 # Name                    Version                   Build  Channel
 torchgeo                  0.7.0                    pypi_0    pypi 
