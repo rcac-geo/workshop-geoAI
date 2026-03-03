@@ -769,7 +769,8 @@ Desktop once it’s ready like the picture below.
 <li><p>click “Terminal Emulator” under “Applications” to open a Terminal
 and then follow the steps below.</p></li>
 </ul><ol style="list-style-type: decimal"><li>Load modules and Start interactive job as below:</li>
-</ol><pre><code>module load jupyter
+</ol><pre><code>module load modtree/gpu cuda/12.0.1 conda
+module load jupyter
 module load gfms
 module load Aurora</code></pre>
 <ol start="2" style="list-style-type: decimal"><li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
@@ -797,7 +798,8 @@ notebook is up.</li>
 <p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
 a Terminal and then follow the steps below.</p>
 <ol style="list-style-type: decimal"><li>Load modules and Start interactive job as below:</li>
-</ol><pre><code>module load jupyter
+</ol><pre><code>module load modtree/gpu cuda/12.0.1 conda
+module load jupyter
 module load gfms
 module load Aurora</code></pre>
 <pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
@@ -844,6 +846,21 @@ the first session do these three cases belong to?</h3>
 <p>3: Regression Problem-Time Series Forecasting  </p>
 </div>
 </div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul><li>There are three ways to perform GeoAI tasks on HPC: Batch jobs,
+Interactive jobs via Open OnDemand, and Interactive jobs via
+ThinLinc.</li>
+<li>You could use “module load” command to load a variety of pre-staged
+geoAI datasets, and Geoscience Foundation Models (GFMs) on Anvil.</li>
+</ul></div>
 </div>
 </div>
 <!--
