@@ -132,7 +132,7 @@ We will use GPU for the exercises of this case study.
 # FILENAME:  myjobsubmissionfile
 
 #SBATCH -A asc170016-gpu
-#SBATCH -p gpu # the default queue is "shared" queue
+#SBATCH -p gpu 
 #SBATCH -N 1
 #SBATCH -c 32
 #SBATCH --gpus-per-node=1
@@ -147,8 +147,8 @@ module load geoai/multi-temporal-crop-classification
 module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24
 
-conda activate $SCRATCH/conda_env/geoai_env
-cd ./geoAI  # check the callout note below
+conda activate $SCRATCH/conda_env/geoai_env   #change this to the path of your own TerraTorch environment
+cd ./geoAI  # check the callout note below to make the change
 
 python train.py
 ```
