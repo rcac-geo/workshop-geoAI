@@ -458,7 +458,7 @@ code below:</li>
 #SBATCH -N 1
 #SBATCH -c 32
 #SBATCH --gpus-per-node=1
-#SBATCH -t 1:30:00
+#SBATCH -t 20:00
 #SBATCH --job-name mgpujob
 
 module load modtree/gpu cuda/12.0.1 conda
@@ -730,7 +730,7 @@ the first session do these three cases belong to?</h3>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>1 &amp; 2: Classfication Problem-Semantic Segmentation</p>
 <p>3: Regression Problem-Time Series Forecasting  </p>
