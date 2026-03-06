@@ -4,45 +4,50 @@
 # Remember to update this file periodically, 
 # ensuring that the author list and other fields remain accurate.
 
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-title: GeoAI on HPC: from single-task paradigm to multiple-task Geoscience Foundation Models
+title: >-
+  GeoAI on HPC: from single-task paradigm to multiple-task
+  Geoscience Foundation Models
 message: >-
-Please cite this lesson using the information in this file 
-when you refer to it in publications, and/or if you
-re-use, adapt, or expand on the content in your own 
-training material.
+  If you use this dataset, please cite it using the metadata
+  from this file.
 type: dataset
 authors:
   - given-names: Xiao
     family-names: Liu
     email: liu4201@purdue.edu
     affiliation: >-
-      The Rosen Center for Advanced Computing, Purdue
+      The Rosen Center for Advanced Computing, Purdue      
       University, Indiana, USA
     orcid: 'https://orcid.org/0000-0002-6303-0771'
 identifiers:
   - type: url
-    value: 'https://rcac-geo.github.io/workshop-qgis/'
+    value: 'https://rcac-geo.github.io/workshop-geoAI/'
     description: workshop url
-repository-code: 'https://github.com/rcac-geo/ workshop-geoAI/'
-url: 'https://rcac-geo.github.io/ workshop-geoAI/'
+repository-code: 'https://github.com/rcac-geo/workshop-geoAI/'
+url: 'https://rcac-geo.github.io/workshop-geoAI/'
 abstract: >-
   Begin your geospatial journey on HPC clusters with GeoAI.
-  This workshop covers the foundational concepts of GeoAI, 
-introduce what typical GeoAI tasks are and how AI are applied 
-to geospatial data like satellite imagery. It also guides the 
-practical tools including TorchGeo and TerraTorch python library 
-that enable this work and set up working environment on HPC Clusters. 
-Through hands-on exercises, participants will go through 
-several case studies to understand the transition from traditional, 
-single-task GeoAI models—like a model trained to identify specific 
-land cover types—to the latest advancements in Geoscience Foundation Models. 
+  This workshop covers the foundational concepts of GeoAI,
+  introduce what typical GeoAI tasks are and how AI are
+  applied to geospatial data like satellite imagery. It also
+  guides the practical tools including TorchGeo and
+  TerraTorch python library that enable this work and set up
+  working environment on HPC Clusters. Through a hands-on
+  session, participants will go through several case studies
+  to understand the transition from traditional, single-task
+  GeoAI models—like a model trained to identify specific
+  land cover types—to the latest advancements in Geoscience
+  Foundation Models. 
 keywords:
   - GeoAI
   - HPC Clusters
   - Anvil
-  - multiple-task
   - Geoscience Foundation Models
+  - multiple-task
 license: CC-BY-4.0
 commit: 1c7e41ecf10009a702948766dc0cd1057ba43ad5
 version: '1.0'
