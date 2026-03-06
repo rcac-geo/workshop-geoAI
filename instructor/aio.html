@@ -771,7 +771,7 @@ pictures below show.</p></li>
   Note
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>you could find your Anvil username here if you don’t know it. For the
 example here, my Anvil username is <code>x-xliu26</code>, while my
@@ -814,7 +814,7 @@ authentication to anvil.rcac.purdue.edu using your Anvil username:</p>
   Note
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>Your Anvil username is not the same as your ACCESS username (although
 it is derived from it). Anvil usernames look like x-ACCESSusername or
@@ -850,7 +850,7 @@ and follow the steps below.</p>
   Note
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <p>On this workshop, you will install the tools in <code>$SCRATCH</code>
 for practicing. But for real case use, you should install it into the
@@ -909,7 +909,7 @@ torchgeo                  0.7.0                    pypi_0    pypi </code></pre>
   Note
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>Storage in <code>$SCRATCH</code> will be purged in 30 days without
 access; they need to backup to your depot space with <code>sync</code>
@@ -982,7 +982,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-cases"><p>Content from <a href="cases.html">Case Studies</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-06 |
 
         <a href="https://github.com/rcac-geo/workshop-geoAI/edit/main/episodes/cases.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1039,18 +1039,16 @@ of action.</p>
 <section><h2 class="section-heading" id="a-case-study-of-a-single-task-model-with-torchgeo">1. A Case study of a single-task model with TorchGeo<a class="anchor" aria-label="anchor" href="#a-case-study-of-a-single-task-model-with-torchgeo"></a>
 </h2>
 <hr class="half-width">
+<p>We will use CPU for the exercises of this case study.</p>
 <div class="section level3">
-<h3 id="use-cpu">1.1 Use CPU<a class="anchor" aria-label="anchor" href="#use-cpu"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-open-ondemand">1.1 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand"></a>
 </h3>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-open-ondemand">1.1.1 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand"></a>
-</h4>
 <ul>
 <li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">Open
 OnDemand</a>, click “Desktop” under “Interactive Apps”. Input the
 allocation, Queue, and Wall Time and Cores as the picture below and hit
 Launch.
-<img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" class="figure"></p></li>
+<img width="714" height="507" alt="Screenshot 2026-03-04 at 5 15 15 PM" src="https://github.com/user-attachments/assets/f32d32d8-bc8e-4d0d-ab8a-ec24abde3cd8" class="figure"></p></li>
 <li><p>The Desktop Session will be queued, and you could click Launch
 Desktop once it’s ready like the picture below.
 <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" class="figure"></p></li>
@@ -1075,6 +1073,10 @@ after jupyter notebook is up.</p></li>
 <li>run cell by cell in <code>torchgeo_case-cpu.ipynb</code>
 </li>
 </ol>
+<p><strong>Please complete this exercise in 20 mins.</strong></p>
+<p>For this workshop, please make sure to <strong>click “delete” button
+in the picture below to realise your CPUs after 20 mins.</strong>
+<img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" class="figure"></p>
 <div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1090,9 +1092,8 @@ which has better performance.</p>
 </div>
 </div>
 </div>
-</div>
 <div class="section level3">
-<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc">1.1.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc">1.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc"></a>
 </h3>
 <p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
 a Terminal and then follow the steps below.</p>
@@ -1103,7 +1104,7 @@ a Terminal and then follow the steps below.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Start interactive job</li>
 </ol>
-<pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
+<pre><code>sinteractive -A tra250034 -N1 -c32 -p shared -t 30:00</code></pre>
 <pre><code>salloc: Pending job allocation 14771023
 salloc: job 14771023 queued and waiting for resources
 salloc: job 14771023 has been allocated resources
@@ -1141,81 +1142,6 @@ which has better performance.</p>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="use-gpu">1.2 Use GPU<a class="anchor" aria-label="anchor" href="#use-gpu"></a>
-</h3>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-open-ondemand-1">1.2.1 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-1"></a>
-</h4>
-<ul>
-<li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">Open
-OnDemand</a>, click “Desktop” under “Interactive Apps”. Input the
-allocation, Queue, and Wall Time and Cores as the picture below and hit
-Launch. <img width="714" height="401" alt="image" src=".." class="figure"></p></li>
-<li><p>The Desktop Session will be queued, and you could click Launch
-Desktop once it’s ready like the picture below.
-<img width="940" height="272" alt="image" src=".." class="figure"></p></li>
-<li><p>click “Terminal Emulator” under “Applications” to open a Terminal
-and then follow the steps below.</p></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>Load modules:</li>
-</ol>
-<pre><code>module load modtree/gpu cuda/12.0.1
-module load jupyter</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
-</ol>
-<ul>
-<li><p>start jupyter notebook by running <code>jupyter notebook</code>
-in the terminal</p></li>
-<li><p>Select the kernel you built in last session
-(<code>geo_env_kernel</code> for the give example) from the kernel list,
-after jupyter notebook is up.</p></li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>run cell by cell in <code>torchgeo_case.ipynb</code>
-</li>
-</ol>
-</div>
-</div>
-<div class="section level3">
-<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc-1">1.2.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-1"></a>
-</h3>
-<p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
-a Terminal and then follow the steps below.</p>
-<ol style="list-style-type: decimal">
-<li>Load modules:</li>
-</ol>
-<pre><code>module load modtree/gpu cuda/12.0.1
-module load jupyter</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Start interactive job</li>
-</ol>
-<pre><code>sinteractive -A tra250034-gpu -N1 -c32 -p gpu --gpus-per-node=1 -t 30:00</code></pre>
-<pre><code>salloc: Pending job allocation 14771023
-salloc: job 14771023 queued and waiting for resources
-salloc: job 14771023 has been allocated resources
-salloc: Granted job allocation 14771023
-salloc: Waiting for resource configuration
-salloc: Nodes a600 are ready for job</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
-</ol>
-<ul>
-<li>start jupyter notebook by running</li>
-</ul>
-<p><code>jupyter notebook</code> in the terminal</p>
-<ul>
-<li>Select the kernel you built in last session
-(<code>geoai_env_kernel</code> for the give example) from the kernel
-list, after jupyter notebook is up.</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>run cell by cell in <code>torchgeo_case.ipynb</code>
-</li>
-</ol>
-</div>
 </section><section><h2 class="section-heading" id="a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0">2. A Case study of GFMs with TerraTorch: Prithvi-EO-2.0<a class="anchor" aria-label="anchor" href="#a-case-study-of-gfms-with-terratorch-prithvi-eo-2-0"></a>
 </h2>
 <hr class="half-width">
@@ -1224,6 +1150,7 @@ list, after jupyter notebook is up.</li>
 </h3>
 <pre><code>module load gfms
 module load Prithvi-EO-2.0/300M-TL-2025-03-24</code></pre>
+<p>We will use GPU for the exercises of this case study.</p>
 </div>
 <div class="section level3">
 <h3 id="batch-job">2.2 Batch Job<a class="anchor" aria-label="anchor" href="#batch-job"></a>
@@ -1293,7 +1220,7 @@ with your job id).</li>
 </ul>
 </div>
 <div class="section level3">
-<h3 id="interactive-job-on-the-remote-desktop-with-open-ondemand-2">2.3 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-2"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-open-ondemand-1">2.3 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-1"></a>
 </h3>
 <ul>
 <li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">Open
@@ -1338,7 +1265,11 @@ list, after jupyter notebook is up.</li>
 <p>It will take ~15 mins to train 10 epochs. You could reduce
 <code>EPOCHS = 10</code> in cell 3 to save more time, or increase it
 after the workshop to achieve better performance when more GPUs are
-available.</p>
+available. <strong>Please complete this exercise in 20
+mins.</strong></p>
+<p>For this workshop, please make sure to <strong>click “delete” button
+in the picture below to realise your GPU after 20 mins.</strong>
+<img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" class="figure"></p>
 <ol start="4" style="list-style-type: decimal">
 <li>you could check the GPU usage with running the commands below in a
 new terminal:</li>
@@ -1370,7 +1301,7 @@ Mon Dec  8 14:14:56 2025
 |    0   N/A  N/A   2195239      C   ...pp/conda_env/geo_env/bin/python3.12      16978MiB |</code></pre>
 </div>
 <div class="section level3">
-<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc-2">2.4 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-2"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc-1">2.4 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-1"></a>
 </h3>
 <p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
 a Terminal and then follow the steps below.</p>
@@ -1456,19 +1387,17 @@ Mon Dec  8 14:14:56 2025
 </h3>
 <pre><code>module load gfms
 module load Aurora</code></pre>
+<p>We will use CPU for the exercises of this case study.</p>
 </div>
 <div class="section level3">
-<h3 id="use-cpu-1">3.2 Use CPU<a class="anchor" aria-label="anchor" href="#use-cpu-1"></a>
+<h3 id="interactive-job-on-the-remote-desktop-with-open-ondemand-2">3.2 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-2"></a>
 </h3>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-open-ondemand-3">3.2.1 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-3"></a>
-</h4>
 <ul>
 <li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">Open
 OnDemand</a>, click “Desktop” under “Interactive Apps”. Input the
 allocation, Queue, and Wall Time and Cores as the picture below and hit
 Launch.
-<img width="714" height="401" alt="image" src="https://github.com/user-attachments/assets/2d63d165-e063-466b-bec8-7bbc576d5615" class="figure"></p></li>
+<img width="714" height="507" alt="Screenshot 2026-03-04 at 5 15 15 PM" src="https://github.com/user-attachments/assets/5de436d5-df99-4337-8d28-d7d01cbebea1" class="figure"></p></li>
 <li><p>The Desktop Session will be queued, and you could click Launch
 Desktop once it’s ready like the picture below.
 <img width="940" height="272" alt="image" src="https://github.com/user-attachments/assets/4fb0d99d-df90-4285-8a93-33157015ce9b" class="figure"></p></li>
@@ -1508,13 +1437,19 @@ notebook is up.</li>
 <li>run cell by cell in <code>gfm_aurora-cpu.ipynb</code>
 </li>
 </ol>
-<p>It will take ~5 min to finishi the inference on a whole cpu node. It
-will be very fast if you request a interactive job with GPU available
-and run <code>gfm_aurora-gpu.ipynb</code>.</p>
+<p>It will take ~5 mins to finishi the inference on a whole cpu node
+(~10 mins on 32 cpu cores). It will be very fast if you request a
+interactive job with GPU available and run
+<code>gfm_aurora-gpu.ipynb</code>, but we leave that offline to limited
+GPUs reserved for this workshop.</p>
+<p><strong>Please complete this exercise in 20 mins.</strong></p>
+<p>For this workshop, please make sure to <strong>click “delete” button
+in the picture below to realise your CPUs after 20 mins.</strong></p>
+<figure><img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" class="figure mx-auto d-block"></figure>
 </div>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-thinlinc-3">3.2.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-3"></a>
-</h4>
+<div class="section level3">
+<h3 id="interactive-job-on-the-remote-desktop-with-thinlinc-2">3.3 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-2"></a>
+</h3>
 <p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
 a Terminal and then follow the steps below.</p>
 <ol style="list-style-type: decimal">
@@ -1554,100 +1489,6 @@ notebook is up.</li>
 <p>It will take ~5 min to finishi the inference on a whole cpu node. It
 will be very fast if you request a interactive job with GPU available
 and run <code>gfm_aurora-gpu.ipynb</code>.</p>
-</div>
-</div>
-<div class="section level3">
-<h3 id="use-gpu-1">3.3 Use GPU<a class="anchor" aria-label="anchor" href="#use-gpu-1"></a>
-</h3>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-open-ondemand-4">3.3.1 Interactive Job on the remote desktop with Open OnDemand<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-open-ondemand-4"></a>
-</h4>
-<ul>
-<li><p>With <a href="https://ondemand.anvil.rcac.purdue.edu/" class="external-link">Open
-OnDemand</a>, click “Desktop” under “Interactive Apps”. Input the
-allocation, Queue, and Wall Time and Cores as the picture below and hit
-Launch. <img width="714" height="401" alt="image" src=".." class="figure"></p></li>
-<li><p>The Desktop Session will be queued, and you could click Launch
-Desktop once it’s ready like the picture below.
-<img width="940" height="272" alt="image" src=".." class="figure"></p></li>
-<li><p>click “Terminal Emulator” under “Applications” to open a Terminal
-and then follow the steps below.</p></li>
-</ul>
-<ol style="list-style-type: decimal">
-<li>Load modules and Start interactive job as below:</li>
-</ol>
-<pre><code>module load modtree/gpu cuda/12.0.1 conda
-module load jupyter
-module load gfms
-module load Aurora</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
-</ol>
-<ul>
-<li>start jupyter notebook by running</li>
-</ul>
-<p><code>jupyter notebook</code> in the terminal</p>
-<ul>
-<li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
-notebook is up.</li>
-</ul>
-<div id="callout7" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Note the module jupyter must be loaded before Aurora to have the
-<code>gfms_aurora</code> kernel to be found.</p>
-</div>
-</div>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>run cell by cell in <code>gfm_aurora-gpu.ipynb</code>
-</li>
-</ol>
-</div>
-<div class="section level4">
-<h4 id="interactive-job-on-the-remote-desktop-with-thinlinc-4">3.3.2 Interactive Job on the remote desktop with ThinLinc<a class="anchor" aria-label="anchor" href="#interactive-job-on-the-remote-desktop-with-thinlinc-4"></a>
-</h4>
-<p>With ThinLinc, click “Terminal Emulator” under “Applications” to open
-a Terminal and then follow the steps below.</p>
-<ol style="list-style-type: decimal">
-<li>Load modules and Start interactive job as below:</li>
-</ol>
-<pre><code>module load modtree/gpu cuda/12.0.1 conda
-module load jupyter
-module load gfms
-module load Aurora</code></pre>
-<pre><code>sinteractive -A tra250034 -N1 -c128 -p wholenode -t 30:00</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Open jupyter notebook and Use the Centralized Aurora Kernel</li>
-</ol>
-<ul>
-<li>start jupyter notebook by running</li>
-</ul>
-<p><code>jupyter notebook</code> in the terminal</p>
-<ul>
-<li>Select <code>gfms_aurora</code> from the kernel list, after jupyter
-notebook is up.</li>
-</ul>
-<div id="callout8" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div class="callout-inner">
-<div class="callout-content">
-<p>Note the module jupyter must be loaded before Aurora to have the
-<code>gfms_aurora</code> kernel to be found.</p>
-</div>
-</div>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>run cell by cell in <code>gfm_aurora.ipynb</code>
-</li>
-</ol>
 <div id="which-categories-of-taskproblem-mentioned-in-the-first-session-do-these-three-cases-belong-to" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1695,7 +1536,6 @@ geoAI datasets, and Geoscience Foundation Models (GFMs) on Anvil.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
 </div>
 </section></section>
 </div>
@@ -1747,8 +1587,8 @@ any links that you are not going to use.
   "url": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "identifier": "https://rcac-geo.github.io/workshop-geoAI/instructor/aio.html",
   "dateCreated": "2025-11-20",
-  "dateModified": "2026-03-03",
-  "datePublished": "2026-03-03"
+  "dateModified": "2026-03-06",
+  "datePublished": "2026-03-06"
 }
 
   </script><script>
