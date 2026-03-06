@@ -136,7 +136,7 @@ We will use GPU for the exercises of this case study.
 #SBATCH -N 1
 #SBATCH -c 32
 #SBATCH --gpus-per-node=1
-#SBATCH -t 1:30:00
+#SBATCH -t 20:00
 #SBATCH --job-name mgpujob
 
 module load modtree/gpu cuda/12.0.1 conda
