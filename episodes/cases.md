@@ -57,6 +57,11 @@ module load jupyter
 
 (3) run cell by cell in `torchgeo_case-cpu.ipynb`
 
+**Please complete this exercise in 20 mins.**
+
+For this workshop, please make sure to **click "delete" button in the picture below to realise your CPUs after 20 mins.**
+<img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
+
 ::::::::::::::::::::::::::::::::::::: callout
 
 Note if GPU is not available, the code is implemented to have just make 1 pass and limit the size of the datasets. You could see the figures of more training with GPU in `torchgeo_case.ipynb`, which has better performance. 
@@ -195,7 +200,10 @@ module load jupyter
 
 (3) run cell by cell in `terratorch_gfms_case.ipynb` 
 
-It will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. 
+It will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. **Please complete this exercise in 20 mins.**
+
+For this workshop, please make sure to **click "delete" button in the picture below to realise your GPU after 20 mins.**
+<img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
 
 
 (4) you could check the GPU usage with running the commands below in a new terminal:
@@ -348,8 +356,13 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 
 (3) run cell by cell in `gfm_aurora-cpu.ipynb`
 
-It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
+It will take ~5 mins to finishi the inference on a whole cpu node (~10 mins on 32 cpu cores). It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`, but we leave that offline to limited GPUs reserved for this workshop.
 
+**Please complete this exercise in 20 mins.**
+
+For this workshop, please make sure to **click "delete" button in the picture below to realise your CPUs after 20 mins.**
+
+<img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
 
 ### 3.3 Interactive Job on the remote desktop with ThinLinc 
 
@@ -383,7 +396,6 @@ Note the module jupyter must be loaded before Aurora to have the `gfms_aurora` k
 (3) run cell by cell in `gfm_aurora-cpu.ipynb`
 
 It will take ~5 min to finishi the inference on a whole cpu node. It will be very fast if you request a interactive job with GPU available and run `gfm_aurora-gpu.ipynb`.
-
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
