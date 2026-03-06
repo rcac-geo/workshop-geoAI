@@ -13,6 +13,7 @@
 # and themed with your own logo and alt-text (see `carpentry_description`)
 # See https://carpentries.github.io/sandpaper-docs/editing.html#adding-a-custom-logo
 carpentry: 'rcac'
+varnish: aseetharam/varnish
 
 # Alt-text description of the lesson.
 carpentry_description: 'Lesson Description'
@@ -24,11 +25,11 @@ title: 'GeoAI on HPC: from single-task paradigm to multiple-task Geoscience Foun
 created: '2025-11-20'
 
 # Comma-separated list of keywords for the lesson
-keywords: 'geoAI, geosciences foundation models, HPC' 
+keywords: 'geoAI, geosciences foundation models, HPC, Anvil, multiple-task' 
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'stable' 
 
 # License of the lesson
 license: 'CC-BY 4.0'
