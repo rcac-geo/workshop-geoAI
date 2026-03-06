@@ -57,9 +57,10 @@ module load jupyter
 
 (3) run cell by cell in `torchgeo_case-cpu.ipynb`
 
+
 **Please complete this exercise in 20 mins.**
 
-For this workshop, please make sure to **click "delete" button in the picture below to realise your CPUs after 20 mins.**
+For this workshop, please make sure to **click "delete" button in the picture below to release your CPUs after 20 mins.**
 <img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -202,7 +203,7 @@ module load jupyter
 
 It will take ~15 mins to train 10 epochs. You could reduce `EPOCHS = 10` in cell 3 to save more time, or increase it after the workshop to achieve better performance when more GPUs are available. **Please complete this exercise in 20 mins.**
 
-For this workshop, please make sure to **click "delete" button in the picture below to realise your GPU after 20 mins.**
+For this workshop, please make sure to **click "delete" button in the picture below to release your GPU after 20 mins.**
 <img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
 
 
@@ -360,7 +361,7 @@ It will take ~5 mins to finishi the inference on a whole cpu node (~10 mins on 3
 
 **Please complete this exercise in 20 mins.**
 
-For this workshop, please make sure to **click "delete" button in the picture below to realise your CPUs after 20 mins.**
+For this workshop, please make sure to **click "delete" button in the picture below to release your CPUs after 20 mins.**
 
 <img width="714" height="229" alt="image" src="https://github.com/user-attachments/assets/227f08a1-7c29-4a08-accd-10d300c1db2c" />
 
