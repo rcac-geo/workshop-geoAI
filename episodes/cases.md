@@ -125,7 +125,7 @@ We will use GPU for the exercises of this case study.
 
 (1) Prepare Jobscript
 
-- Build a jobscript `train.gpujob`, for example, you could run the command `vim  train.gpujob` and copy & paste the code below:
+- Build a jobscript `train.gpujob`, for example, you could run the command `vim train.gpujob` and copy & paste the code below:
 
 ```
 #!/bin/sh -l
